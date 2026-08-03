@@ -13,6 +13,7 @@ TrainCue combines the ideas from the other two watch apps:
 - Manual GitHub update from `routines.json`
 - Local cached plan when GitHub is unavailable
 - Tap-to-complete plan items
+- Delete a day from the local watch plan after finishing it
 - Strength items can include exercise sets and reps
 - Individual strength exercises can be ticked off separately
 - Run items are identified by `"type": "run"`
@@ -89,7 +90,7 @@ The app can import routines from a public GitHub-hosted JSON file when you tap `
 2. Use the raw file URL, for example `https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main/routines.json`.
 3. Paste that URL into `ROUTINE_FEED_URL` near the top of `app/src/main/java/com/jongrady/galaxywatchsplits/MainActivity.kt`.
 
-If GitHub can be reached, the watch replaces its saved plan with the latest JSON. If GitHub cannot be reached, it keeps the saved watch copy.
+If GitHub can be reached, the watch replaces its saved plan with the latest JSON. If GitHub cannot be reached, it keeps the saved watch copy. Locally deleted days will come back the next time you manually update from GitHub.
 
 ## Open in Android Studio
 

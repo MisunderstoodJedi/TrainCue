@@ -134,6 +134,7 @@ private fun TrainCueApp() {
     var activeRun by remember { mutableStateOf<PlanItem?>(null) }
     var syncMessage by rememberSaveable { mutableStateOf("Local plan") }
     var updateRequested by remember { mutableStateOf(false) }
+    var confirmDeleteDay by rememberSaveable { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         delay(1600)
@@ -210,7 +211,20 @@ private fun TrainCueApp() {
                         },
                         onToggleItem = { item -> toggleCompleted(item.completionKey()) },
                         onToggleWorkout = { item, workout -> toggleCompleted(item.workoutCompletionKey(workout)) },
-                        onBack = { screen = Screen.Plan },
+                        confirmDelete = confirmDeleteDay,
+                        onDeleteRequest = { confirmDeleteDay = true },
+                        onDeleteCancel = { confirmDeleteDay = false },
+                        onDeleteConfirm = {
+                            days.remove(day)
+                            repository.save(days)
+                            activeDay = null
+                            confirmDeleteDay = false
+                            screen = Screen.Plan
+                        },
+                        onBack = {
+                            confirmDeleteDay = false
+                            screen = Screen.Plan
+                        },
                     )
                 }
                 Screen.RunOptions -> activeRun?.let { run ->
@@ -316,6 +330,10 @@ private fun DayScreen(
     onRun: (PlanItem) -> Unit,
     onToggleItem: (PlanItem) -> Unit,
     onToggleWorkout: (PlanItem, WorkoutItem) -> Unit,
+    confirmDelete: Boolean,
+    onDeleteRequest: () -> Unit,
+    onDeleteCancel: () -> Unit,
+    onDeleteConfirm: () -> Unit,
     onBack: () -> Unit,
 ) {
     val listState = rememberScalingLazyListState()
@@ -361,6 +379,34 @@ private fun DayScreen(
                         onClick = { onToggleItem(item) },
                     )
                 }
+            }
+        }
+        item {
+            if (confirmDelete) {
+                Text("Delete day?", fontSize = 13.sp, color = Color(0xFFFFCC80))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(
+                        modifier = Modifier.size(52.dp),
+                        onClick = onDeleteCancel,
+                        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF37474F)),
+                    ) {
+                        Text("No", fontSize = 13.sp)
+                    }
+                    Button(
+                        modifier = Modifier.size(52.dp),
+                        onClick = onDeleteConfirm,
+                        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF5D2C2C)),
+                    ) {
+                        Text("Yes", fontSize = 12.sp)
+                    }
+                }
+            } else {
+                Chip(
+                    modifier = Modifier.fillMaxWidth(0.68f),
+                    onClick = onDeleteRequest,
+                    label = { Text("Delete day") },
+                    colors = ChipDefaults.secondaryChipColors(),
+                )
             }
         }
         item {
