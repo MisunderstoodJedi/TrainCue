@@ -1,0 +1,69 @@
+[
+  {
+    "id": "week1-monday",
+    "title": "Week 1 Monday",
+    "subtitle": "Strength",
+    "items": [
+      {
+        "id": "w1-mon-strength",
+        "type": "strength",
+        "label": "Full body strength",
+        "workouts": [
+          { "name": "Goblet Squat", "sets": 3, "reps": "10" },
+          { "name": "Dumbbell Row", "sets": 3, "reps": "10 each" },
+          { "name": "Push-up", "sets": 3, "reps": "8-12" },
+          { "name": "Plank", "sets": 3, "reps": "45 sec" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "week1-tuesday",
+    "title": "Week 1 Tuesday",
+    "subtitle": "Easy run",
+    "items": [
+      {
+        "id": "w1-tue-run",
+        "type": "run",
+        "label": "2 mi run",
+        "distanceMiles": 2
+      }
+    ]
+  },
+  {
+    "id": "week1-thursday",
+    "title": "Week 1 Thursday",
+    "subtitle": "Run + strength",
+    "items": [
+      {
+        "id": "w1-thu-run",
+        "type": "run",
+        "label": "2 mi run",
+        "distanceMiles": 2
+      },
+      {
+        "id": "w1-thu-strength",
+        "type": "strength",
+        "label": "Upper body strength",
+        "workouts": [
+          { "name": "Bench Press", "sets": 3, "reps": "10" },
+          { "name": "Shoulder Press", "sets": 3, "reps": "8-10" },
+          { "name": "Triceps Pushdown", "sets": 3, "reps": "12" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "week1-saturday",
+    "title": "Week 1 Saturday",
+    "subtitle": "Long run",
+    "items": [
+      {
+        "id": "w1-sat-run",
+        "type": "run",
+        "label": "3.2 km run",
+        "distanceKm": 3.2
+      }
+    ]
+  }
+]
