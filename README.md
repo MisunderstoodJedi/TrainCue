@@ -14,6 +14,7 @@ TrainCue combines the ideas from the other two watch apps:
 - Local cached plan when GitHub is unavailable
 - Tap-to-complete plan items
 - Strength items can include exercise sets and reps
+- Individual strength exercises can be ticked off separately
 - Run items are identified by `"type": "run"`
 - Outdoor run tracking uses watch location when available
 - Spoken run cues announce each kilometre and completion

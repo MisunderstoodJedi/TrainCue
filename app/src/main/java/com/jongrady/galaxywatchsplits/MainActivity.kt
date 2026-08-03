@@ -182,6 +182,10 @@ private fun TrainCueApp() {
         repository.saveCompleted(completedItems.keys)
     }
 
+    fun toggleCompleted(key: String) {
+        setCompleted(key, completedItems[key] != true)
+    }
+
     MaterialTheme {
         AppBackdrop {
             TimeText()
@@ -204,10 +208,8 @@ private fun TrainCueApp() {
                             activeRun = it
                             screen = Screen.RunOptions
                         },
-                        onToggleItem = { item ->
-                            val key = item.completionKey()
-                            setCompleted(key, completedItems[key] != true)
-                        },
+                        onToggleItem = { item -> toggleCompleted(item.completionKey()) },
+                        onToggleWorkout = { item, workout -> toggleCompleted(item.workoutCompletionKey(workout)) },
                         onBack = { screen = Screen.Plan },
                     )
                 }
@@ -313,6 +315,7 @@ private fun DayScreen(
     completedItems: Map<String, Boolean>,
     onRun: (PlanItem) -> Unit,
     onToggleItem: (PlanItem) -> Unit,
+    onToggleWorkout: (PlanItem, WorkoutItem) -> Unit,
     onBack: () -> Unit,
 ) {
     val listState = rememberScalingLazyListState()
@@ -337,12 +340,18 @@ private fun DayScreen(
                     item {
                         PlanItemRow(
                             item = item,
-                            isCompleted = completedItems[item.completionKey()] == true,
-                            onClick = { onToggleItem(item) },
+                            isCompleted = item.workouts.isNotEmpty() && item.workouts.all { workout ->
+                                completedItems[item.workoutCompletionKey(workout)] == true
+                            },
+                            onClick = { },
                         )
                     }
                     items(item.workouts) { workout ->
-                        WorkoutRow(workout)
+                        WorkoutRow(
+                            workout = workout,
+                            isCompleted = completedItems[item.workoutCompletionKey(workout)] == true,
+                            onToggle = { onToggleWorkout(item, workout) },
+                        )
                     }
                 }
                 else -> item {
@@ -396,18 +405,21 @@ private fun PlanItemRow(item: PlanItem, isCompleted: Boolean, onClick: () -> Uni
 }
 
 @Composable
-private fun WorkoutRow(workout: WorkoutItem) {
+private fun WorkoutRow(workout: WorkoutItem, isCompleted: Boolean, onToggle: () -> Unit) {
+    val backgroundColor = if (isCompleted) Color(0xCC123D2F) else Color(0x88101820)
+    val repsColor = if (isCompleted) Color(0xFFA5D6A7) else Color(0xFFCFD8DC)
     Row(
         modifier = Modifier
             .fillMaxWidth(0.84f)
             .clip(RoundedCornerShape(14.dp))
-            .background(Color(0x88101820), RoundedCornerShape(14.dp))
+            .background(backgroundColor, RoundedCornerShape(14.dp))
+            .clickable(onClick = onToggle)
             .padding(horizontal = 10.dp, vertical = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Text(workout.name, modifier = Modifier.weight(1f), fontSize = 12.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        Text("${workout.sets} x ${workout.reps}", fontSize = 12.sp, color = Color(0xFFCFD8DC), maxLines = 1)
+        Text(if (isCompleted) "Done" else "${workout.sets} x ${workout.reps}", fontSize = 12.sp, color = repsColor, maxLines = 1)
     }
 }
 
@@ -639,6 +651,10 @@ private class TrainingCuePlayer(context: Context) {
 }
 
 private fun PlanItem.completionKey(): String = id
+
+private fun PlanItem.workoutCompletionKey(workout: WorkoutItem): String {
+    return "${id}:${workout.name.trim().uppercase()}"
+}
 
 private fun parseDays(raw: String): List<TrainingDay> {
     val trimmed = raw.trim()
