@@ -540,6 +540,30 @@ private fun ExercisePreviewScreen(
     val imageResId = remember(workout.imageAsset) {
         resolveDrawableResId(context, workout.imageAsset)
     }
+    var imageExpanded by remember { mutableStateOf(false) }
+
+    if (imageExpanded) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Black)
+                .clickable { imageExpanded = false }
+                .padding(10.dp),
+            contentAlignment = Alignment.Center,
+        ) {
+            if (imageResId != null) {
+                Image(
+                    painter = painterResource(id = imageResId),
+                    contentDescription = workout.name,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier.fillMaxSize(),
+                )
+            } else {
+                Text("No image", fontSize = 12.sp, color = Color(0xFFFFCC80))
+            }
+        }
+        return
+    }
 
     Column(
         modifier = Modifier
@@ -577,6 +601,7 @@ private fun ExercisePreviewScreen(
                 .clip(RoundedCornerShape(14.dp))
                 .background(Color(0xEE101820), RoundedCornerShape(14.dp))
                 .border(1.dp, Color(0x661DE9B6), RoundedCornerShape(14.dp))
+                .clickable(enabled = imageResId != null) { imageExpanded = true }
                 .padding(6.dp),
             contentAlignment = Alignment.Center,
         ) {
