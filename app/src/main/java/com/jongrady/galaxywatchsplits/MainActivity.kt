@@ -75,9 +75,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
+import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
+import java.net.HttpURLConnection
+import java.net.SocketTimeoutException
 import java.net.URL
+import java.net.UnknownHostException
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -109,6 +113,7 @@ private data class PlanItem(
 )
 
 private data class WorkoutItem(
+    val id: String? = null,
     val name: String,
     val sets: Int,
     val reps: String,
@@ -156,7 +161,7 @@ private fun TrainCueApp() {
         completedItems.clear()
         repository.loadCompleted().forEach { completedItems[it] = true }
 
-        if (days.isEmpty()) {
+        if (days.isEmpty() && !repository.hasSavedPlan()) {
             days.addAll(starterPlan())
             repository.save(days)
         }
@@ -167,17 +172,22 @@ private fun TrainCueApp() {
             syncMessage = "Syncing..."
             runCatching { RemotePlanImporter(ROUTINE_FEED_URL).load() }
                 .onSuccess { remoteDays ->
-                    if (remoteDays.isNotEmpty()) {
+                    val visibleRemoteDays = remoteDays.filterNot { it.id in repository.loadDeletedDayIds() }
+                    if (visibleRemoteDays.isNotEmpty()) {
                         days.clear()
-                        days.addAll(remoteDays)
+                        days.addAll(visibleRemoteDays)
                         repository.save(days)
                         syncMessage = "Synced from GitHub"
+                    } else if (remoteDays.isNotEmpty()) {
+                        days.clear()
+                        repository.save(days)
+                        syncMessage = "Synced: all days done"
                     } else {
                         syncMessage = "GitHub file empty"
                     }
                 }
-                .onFailure {
-                    syncMessage = "GitHub sync failed"
+                .onFailure { error ->
+                    syncMessage = error.syncMessage()
                 }
             updateRequested = false
         }
@@ -221,7 +231,12 @@ private fun TrainCueApp() {
                         onToggleItem = { item -> toggleCompleted(item.completionKey()) },
                         onToggleWorkout = { item, workout ->
                             if (workout.imageAsset.isNullOrBlank()) {
-                                toggleCompleted(item.workoutCompletionKey(workout))
+                                val keys = item.workoutCompletionKeys(workout)
+                                if (completedItems.isWorkoutCompleted(item, workout)) {
+                                    keys.forEach { setCompleted(it, false) }
+                                } else {
+                                    setCompleted(keys.first(), true)
+                                }
                             } else {
                                 activeWorkoutSelection = WorkoutSelection(item, workout)
                                 screen = Screen.ExercisePreview
@@ -232,6 +247,7 @@ private fun TrainCueApp() {
                         onDeleteCancel = { confirmDeleteDay = false },
                         onDeleteConfirm = {
                             days.remove(day)
+                            repository.addDeletedDayId(day.id)
                             repository.save(days)
                             activeDay = null
                             confirmDeleteDay = false
@@ -268,9 +284,14 @@ private fun TrainCueApp() {
                 Screen.ExercisePreview -> activeWorkoutSelection?.let { selection ->
                     ExercisePreviewScreen(
                         workout = selection.workout,
-                        isCompleted = completedItems[selection.item.workoutCompletionKey(selection.workout)] == true,
+                        isCompleted = completedItems.isWorkoutCompleted(selection.item, selection.workout),
                         onToggleCompleted = {
-                            toggleCompleted(selection.item.workoutCompletionKey(selection.workout))
+                            val keys = selection.item.workoutCompletionKeys(selection.workout)
+                            if (completedItems.isWorkoutCompleted(selection.item, selection.workout)) {
+                                keys.forEach { setCompleted(it, false) }
+                            } else {
+                                setCompleted(keys.first(), true)
+                            }
                             activeWorkoutSelection = null
                             screen = Screen.Day
                         },
@@ -393,7 +414,7 @@ private fun DayScreen(
                         PlanItemRow(
                             item = item,
                             isCompleted = item.workouts.isNotEmpty() && item.workouts.all { workout ->
-                                completedItems[item.workoutCompletionKey(workout)] == true
+                                completedItems.isWorkoutCompleted(item, workout)
                             },
                             onClick = { },
                         )
@@ -401,7 +422,7 @@ private fun DayScreen(
                     items(item.workouts) { workout ->
                         WorkoutRow(
                             workout = workout,
-                            isCompleted = completedItems[item.workoutCompletionKey(workout)] == true,
+                            isCompleted = completedItems.isWorkoutCompleted(item, workout),
                             onToggle = { onToggleWorkout(item, workout) },
                         )
                     }
@@ -537,6 +558,18 @@ private fun ExercisePreviewScreen(
             textAlign = TextAlign.Center,
         )
         Text("${workout.sets} x ${workout.reps}", fontSize = 11.sp, color = Color(0xFFCFD8DC))
+        if (workout.note.isNotBlank()) {
+            Text(
+                workout.note,
+                modifier = Modifier.fillMaxWidth(0.9f),
+                fontSize = 10.sp,
+                lineHeight = 12.sp,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                color = Color(0xFFB0BEC5),
+                textAlign = TextAlign.Center,
+            )
+        }
         Spacer(Modifier.height(4.dp))
         Box(
             modifier = Modifier
@@ -604,7 +637,10 @@ private fun RunTrackerScreen(run: PlanItem, cues: TrainingCuePlayer, onComplete:
     var distanceMeters by remember { mutableStateOf(0.0) }
     var lastLocation by remember { mutableStateOf<Location?>(null) }
     var isTracking by remember { mutableStateOf(false) }
+    var elapsedSeconds by remember { mutableStateOf(0L) }
+    var currentAccuracy by remember { mutableStateOf<Float?>(null) }
     var lastAnnouncedKm by remember { mutableStateOf(0) }
+    var halfwayAnnounced by remember { mutableStateOf(false) }
     var completed by remember { mutableStateOf(false) }
 
     val permissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
@@ -616,6 +652,7 @@ private fun RunTrackerScreen(run: PlanItem, cues: TrainingCuePlayer, onComplete:
         if (!hasPermission || !isTracking) return@DisposableEffect onDispose { }
         val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
         val listener = LocationListener { location ->
+            currentAccuracy = location.accuracy
             val previous = lastLocation
             if (previous != null && location.accuracy <= 80f) {
                 val delta = previous.distanceTo(location).toDouble()
@@ -634,12 +671,23 @@ private fun RunTrackerScreen(run: PlanItem, cues: TrainingCuePlayer, onComplete:
         if (isTracking) cues.speak("Run started")
     }
 
+    LaunchedEffect(isTracking) {
+        while (isTracking) {
+            delay(1000)
+            elapsedSeconds += 1
+        }
+    }
+
     LaunchedEffect(distanceMeters, completed) {
         if (!completed && targetKm > 0.0) {
             val currentKm = (distanceMeters / 1000.0).toInt()
             if (currentKm > lastAnnouncedKm) {
                 lastAnnouncedKm = currentKm
                 cues.mark("${currentKm} kilometre")
+            }
+            if (!halfwayAnnounced && targetKm < 2.0 && distanceMeters >= targetKm * 500.0) {
+                halfwayAnnounced = true
+                cues.mark("Halfway")
             }
             if (distanceMeters >= targetKm * 1000.0) {
                 completed = true
@@ -656,6 +704,16 @@ private fun RunTrackerScreen(run: PlanItem, cues: TrainingCuePlayer, onComplete:
         Spacer(Modifier.height(6.dp))
         Text("${formatDistanceKm(distanceMeters / 1000.0)}", fontSize = 34.sp, fontWeight = FontWeight.Bold)
         Text("Target ${formatDistanceKm(targetKm)}", fontSize = 12.sp, color = Color(0xFFB0BEC5))
+        Text(
+            "${formatElapsed(elapsedSeconds)}  ${formatAveragePace(elapsedSeconds, distanceMeters)}",
+            fontSize = 11.sp,
+            color = Color(0xFFCFD8DC),
+        )
+        Text(
+            runStatusText(hasPermission, isTracking, currentAccuracy),
+            fontSize = 10.sp,
+            color = Color(0xFF90A4AE),
+        )
         Spacer(Modifier.height(10.dp))
         if (!hasPermission) {
             Chip(onClick = { permissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION) }, label = { Text("Allow GPS") })
@@ -719,8 +777,8 @@ private fun starterPlan(): List<TrainingDay> {
                     "strength",
                     "Upper body strength",
                     workouts = listOf(
-                        WorkoutItem("Bench Press", 3, "10", imageAsset = "bench_press"),
-                        WorkoutItem("Shoulder Press", 3, "8-10", imageAsset = "shoulder_press"),
+                        WorkoutItem(id = "bench-press", name = "Bench Press", sets = 3, reps = "10", imageAsset = "bench_press"),
+                        WorkoutItem(id = "shoulder-press", name = "Shoulder Press", sets = 3, reps = "8-10", imageAsset = "shoulder_press"),
                     ),
                 ),
             ),
@@ -731,21 +789,47 @@ private fun starterPlan(): List<TrainingDay> {
 private class RemotePlanImporter(private val feedUrl: String) {
     suspend fun load(): List<TrainingDay> = withContext(Dispatchers.IO) {
         val raw = try {
-            URL(feedUrl.withCacheBuster()).openConnection().run {
+            val connection = URL(feedUrl.withCacheBuster()).openConnection() as HttpURLConnection
+            connection.run {
                 connectTimeout = 8000
                 readTimeout = 8000
                 useCaches = false
-                getInputStream().bufferedReader().use { it.readText() }
+                requestMethod = "GET"
+                val status = responseCode
+                if (status !in 200..299) throw PlanSyncException("GitHub HTTP $status")
+                inputStream.bufferedReader().use { it.readText() }
             }
+        } catch (error: SocketTimeoutException) {
+            throw PlanSyncException("GitHub timeout", error)
+        } catch (error: UnknownHostException) {
+            throw PlanSyncException("No internet", error)
         } catch (error: IOException) {
-            throw error
+            throw PlanSyncException("Network error", error)
         }
-        parseDays(raw)
+        if (raw.isBlank()) throw PlanSyncException("GitHub file empty")
+        try {
+            parseDays(raw)
+        } catch (error: JSONException) {
+            throw PlanSyncException("Invalid plan JSON", error)
+        }
     }
 
     private fun String.withCacheBuster(): String {
         val separator = if (contains("?")) "&" else "?"
         return "${this}${separator}updated=${System.currentTimeMillis()}"
+    }
+}
+
+private class PlanSyncException(message: String, cause: Throwable? = null) : Exception(message, cause)
+
+private fun Throwable.syncMessage(): String {
+    return when (this) {
+        is PlanSyncException -> message ?: "GitHub sync failed"
+        is JSONException -> "Invalid plan JSON"
+        is SocketTimeoutException -> "GitHub timeout"
+        is UnknownHostException -> "No internet"
+        is IOException -> "Network error"
+        else -> "GitHub sync failed"
     }
 }
 
@@ -755,6 +839,10 @@ private class TrainingRepository(context: Context) {
     fun load(): List<TrainingDay> {
         val raw = prefs.getString("items", null) ?: return emptyList()
         return parseDays(raw)
+    }
+
+    fun hasSavedPlan(): Boolean {
+        return prefs.contains("items")
     }
 
     fun save(days: List<TrainingDay>) {
@@ -767,6 +855,14 @@ private class TrainingRepository(context: Context) {
 
     fun saveCompleted(completed: Set<String>) {
         prefs.edit().putStringSet("completed", completed.toSet()).apply()
+    }
+
+    fun loadDeletedDayIds(): Set<String> {
+        return prefs.getStringSet("deleted_day_ids", emptySet()).orEmpty()
+    }
+
+    fun addDeletedDayId(dayId: String) {
+        prefs.edit().putStringSet("deleted_day_ids", loadDeletedDayIds() + dayId).apply()
     }
 }
 
@@ -818,6 +914,18 @@ private class TrainingCuePlayer(context: Context) {
 private fun PlanItem.completionKey(): String = id
 
 private fun PlanItem.workoutCompletionKey(workout: WorkoutItem): String {
+    return workout.id?.takeIf { it.isNotBlank() }?.let { "${id}:${it}" } ?: legacyWorkoutCompletionKey(workout)
+}
+
+private fun PlanItem.workoutCompletionKeys(workout: WorkoutItem): List<String> {
+    return listOf(workoutCompletionKey(workout), legacyWorkoutCompletionKey(workout)).distinct()
+}
+
+private fun Map<String, Boolean>.isWorkoutCompleted(item: PlanItem, workout: WorkoutItem): Boolean {
+    return item.workoutCompletionKeys(workout).any { this[it] == true }
+}
+
+private fun PlanItem.legacyWorkoutCompletionKey(workout: WorkoutItem): String {
     return "${id}:${workout.name.trim().uppercase()}"
 }
 
@@ -855,6 +963,7 @@ private fun JSONObject.toPlanItem(): PlanItem {
 
 private fun JSONObject.toWorkoutItem(): WorkoutItem {
     return WorkoutItem(
+        id = optString("id").takeIf { it.isNotBlank() },
         name = getString("name"),
         sets = getInt("sets").coerceAtLeast(1),
         reps = get("reps").toString(),
@@ -890,6 +999,7 @@ private fun PlanItem.toJson(): JSONObject {
 
 private fun WorkoutItem.toJson(): JSONObject {
     return JSONObject()
+        .also { json -> id?.takeIf { it.isNotBlank() }?.let { json.put("id", it) } }
         .put("name", name)
         .put("sets", sets)
         .put("reps", reps)
@@ -899,6 +1009,24 @@ private fun WorkoutItem.toJson(): JSONObject {
 
 private fun formatDistanceKm(km: Double): String {
     return if (km < 10) "${((km * 10).roundToInt() / 10.0)} km" else "${km.roundToInt()} km"
+}
+
+private fun formatElapsed(seconds: Long): String {
+    val minutes = seconds / 60
+    val remainingSeconds = seconds % 60
+    return "${minutes}:${remainingSeconds.toString().padStart(2, '0')}"
+}
+
+private fun formatAveragePace(seconds: Long, distanceMeters: Double): String {
+    if (seconds <= 0 || distanceMeters < 50.0) return "--:--/km"
+    val paceSeconds = (seconds / (distanceMeters / 1000.0)).roundToInt().coerceAtLeast(1)
+    return "${paceSeconds / 60}:${(paceSeconds % 60).toString().padStart(2, '0')}/km"
+}
+
+private fun runStatusText(hasPermission: Boolean, isTracking: Boolean, accuracy: Float?): String {
+    if (!hasPermission) return "GPS permission needed"
+    if (!isTracking) return "Paused"
+    return accuracy?.let { "GPS +/- ${it.roundToInt()} m" } ?: "Finding GPS"
 }
 
 private fun resolveDrawableResId(context: Context, assetName: String?): Int? {
