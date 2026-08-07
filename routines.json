@@ -3072,7 +3072,8 @@
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -3433,7 +3434,8 @@
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -3810,7 +3812,8 @@
           {
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -3836,13 +3839,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 3,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 3,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4095,7 +4100,8 @@
           {
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4121,13 +4127,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 3,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 3,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4385,7 +4393,8 @@
           {
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4411,13 +4420,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4676,7 +4687,8 @@
           {
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4702,13 +4714,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4967,7 +4981,8 @@
           {
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -4993,13 +5008,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -5258,7 +5275,8 @@
           {
             "name": "Water bag lunges (moderate-heavy)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "water_bag_lunge"
           },
           {
             "name": "Goblet squat-to-press",
@@ -5284,13 +5302,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -5575,13 +5595,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -5866,13 +5888,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -6157,13 +6181,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -6448,13 +6474,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -6739,13 +6767,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -7030,13 +7060,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -7321,13 +7353,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",
@@ -7612,13 +7646,15 @@
             "name": "band face pulls, band curls, KB hammer curls",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "band_accessories"
           },
           {
             "name": "dips or elevated push-ups plus one-arm KB rows",
             "sets": 4,
             "reps": "round",
-            "note": ""
+            "note": "",
+            "imageAsset": "pushup_row"
           },
           {
             "name": "Goblet squat-to-press",

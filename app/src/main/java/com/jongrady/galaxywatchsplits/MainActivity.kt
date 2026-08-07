@@ -54,6 +54,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -308,11 +309,14 @@ private fun AppBackdrop(content: @Composable () -> Unit) {
 
 @Composable
 private fun TrainCueSplash() {
+    val versionName = stringResource(id = R.string.app_version)
     CenterColumn {
         TrainMark()
         Spacer(Modifier.height(8.dp))
         Text("TrainCue", fontSize = 25.sp, fontWeight = FontWeight.Bold)
         Text("Run. Lift. Complete.", fontSize = 12.sp, color = Color(0xFFCFD8DC))
+        Spacer(Modifier.height(6.dp))
+        Text("v$versionName", fontSize = 10.sp, color = Color(0xFF90A4AE))
     }
 }
 
@@ -515,17 +519,32 @@ private fun ExercisePreviewScreen(
     val imageResId = remember(workout.imageAsset) {
         resolveDrawableResId(context, workout.imageAsset)
     }
-    val assetLabel = remember(workout.imageAsset) { workout.imageAsset.prettyAssetLabel() }
-    CenterColumn {
-        Text(workout.name, fontSize = 18.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-        Text("${workout.sets} x ${workout.reps}", fontSize = 12.sp, color = Color(0xFFCFD8DC))
-        Spacer(Modifier.height(10.dp))
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(start = 18.dp, top = 28.dp, end = 18.dp, bottom = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top,
+    ) {
+        Text(
+            workout.name,
+            modifier = Modifier.fillMaxWidth(0.92f),
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Bold,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            textAlign = TextAlign.Center,
+        )
+        Text("${workout.sets} x ${workout.reps}", fontSize = 11.sp, color = Color(0xFFCFD8DC))
+        Spacer(Modifier.height(4.dp))
         Box(
             modifier = Modifier
-                .size(112.dp)
-                .clip(RoundedCornerShape(18.dp))
-                .background(Color(0xCC101820), RoundedCornerShape(18.dp))
-                .border(1.dp, Color(0x441DE9B6), RoundedCornerShape(18.dp)),
+                .size(94.dp)
+                .clip(RoundedCornerShape(14.dp))
+                .background(Color(0xEE101820), RoundedCornerShape(14.dp))
+                .border(1.dp, Color(0x661DE9B6), RoundedCornerShape(14.dp))
+                .padding(6.dp),
             contentAlignment = Alignment.Center,
         ) {
             if (imageResId != null) {
@@ -533,34 +552,31 @@ private fun ExercisePreviewScreen(
                     painter = painterResource(id = imageResId),
                     contentDescription = workout.name,
                     contentScale = ContentScale.Fit,
-                    modifier = Modifier.size(92.dp),
+                    modifier = Modifier.fillMaxSize(),
                 )
             } else {
                 Text("No image", fontSize = 12.sp, color = Color(0xFFFFCC80))
             }
         }
-        Spacer(Modifier.height(6.dp))
-        Text(assetLabel, fontSize = 11.sp, color = Color(0xFF90A4AE), textAlign = TextAlign.Center)
         Spacer(Modifier.height(8.dp))
-        Text(
-            if (isCompleted) "Already marked complete" else "View first, then choose",
-            fontSize = 11.sp,
-            color = Color(0xFFB0BEC5),
-            textAlign = TextAlign.Center,
-        )
-        Spacer(Modifier.height(8.dp))
-        Chip(
-            modifier = Modifier.fillMaxWidth(0.74f),
-            onClick = onToggleCompleted,
-            label = { Text(if (isCompleted) "Undo complete" else "Mark complete") },
-            colors = ChipDefaults.primaryChipColors(),
-        )
-        Chip(
-            modifier = Modifier.fillMaxWidth(0.62f),
-            onClick = onClose,
-            label = { Text("Close") },
-            colors = ChipDefaults.secondaryChipColors(),
-        )
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            Button(
+                modifier = Modifier.size(48.dp),
+                onClick = onToggleCompleted,
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = if (isCompleted) Color(0xFF546E7A) else Color(0xFF1B5E48),
+                ),
+            ) {
+                Text(if (isCompleted) "Undo" else "Done", fontSize = 10.sp, textAlign = TextAlign.Center)
+            }
+            Button(
+                modifier = Modifier.size(48.dp),
+                onClick = onClose,
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF37474F)),
+            ) {
+                Text("Back", fontSize = 10.sp)
+            }
+        }
     }
 }
 
@@ -843,7 +859,7 @@ private fun JSONObject.toWorkoutItem(): WorkoutItem {
         sets = getInt("sets").coerceAtLeast(1),
         reps = get("reps").toString(),
         note = optString("note", ""),
-        imageAsset = optString("imageAsset", null),
+        imageAsset = optString("imageAsset").takeIf { it.isNotBlank() },
     )
 }
 
