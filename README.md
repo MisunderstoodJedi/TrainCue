@@ -8,7 +8,7 @@ TrainCue combines the ideas from the other two watch apps:
 - **LiftCue** is for strength routines with exercise, sets, reps, and tap-to-complete rows.
 - **TrainCue** is the combined plan app: it can show a training day containing runs, strength work, rest, cross-training, or any other plan item.
 
-## First version
+## Version 2
 
 - Manual GitHub update from `routines.json`
 - Local cached plan when GitHub is unavailable
@@ -16,6 +16,8 @@ TrainCue combines the ideas from the other two watch apps:
 - Delete a day from the local watch plan after finishing it
 - Strength items can include exercise sets and reps
 - Individual strength exercises can be ticked off separately
+- Optional image preview for exercises with local app assets
+- Image-linked exercises open a preview screen before completion
 - Run items are identified by `"type": "run"`
 - Outdoor run tracking uses watch location when available
 - Spoken run cues announce each kilometre and completion
@@ -55,6 +57,19 @@ Strength items can include workouts:
   ]
 }
 ```
+
+Exercises can optionally point at a drawable asset bundled in the app. The `imageAsset` value should match a drawable resource name in `app/src/main/res/drawable`:
+
+```json
+{
+  "name": "Bench Press",
+  "sets": 3,
+  "reps": "10",
+  "imageAsset": "bench_press"
+}
+```
+
+If an exercise has `imageAsset`, tapping it opens the image first. You can then close the image or mark the exercise complete.
 
 Full day example:
 

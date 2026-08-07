@@ -112,6 +112,12 @@ private data class WorkoutItem(
     val sets: Int,
     val reps: String,
     val note: String = "",
+    val imageAsset: String? = null,
+)
+
+private data class WorkoutSelection(
+    val item: PlanItem,
+    val workout: WorkoutItem,
 )
 
 private enum class Screen {
@@ -120,6 +126,7 @@ private enum class Screen {
     Day,
     RunOptions,
     RunTracker,
+    ExercisePreview,
 }
 
 @Composable
@@ -132,6 +139,7 @@ private fun TrainCueApp() {
     var screen by rememberSaveable { mutableStateOf(Screen.Splash) }
     var activeDay by remember { mutableStateOf<TrainingDay?>(null) }
     var activeRun by remember { mutableStateOf<PlanItem?>(null) }
+    var activeWorkoutSelection by remember { mutableStateOf<WorkoutSelection?>(null) }
     var syncMessage by rememberSaveable { mutableStateOf("Local plan") }
     var updateRequested by remember { mutableStateOf(false) }
     var confirmDeleteDay by rememberSaveable { mutableStateOf(false) }
@@ -210,7 +218,14 @@ private fun TrainCueApp() {
                             screen = Screen.RunOptions
                         },
                         onToggleItem = { item -> toggleCompleted(item.completionKey()) },
-                        onToggleWorkout = { item, workout -> toggleCompleted(item.workoutCompletionKey(workout)) },
+                        onToggleWorkout = { item, workout ->
+                            if (workout.imageAsset.isNullOrBlank()) {
+                                toggleCompleted(item.workoutCompletionKey(workout))
+                            } else {
+                                activeWorkoutSelection = WorkoutSelection(item, workout)
+                                screen = Screen.ExercisePreview
+                            }
+                        },
                         confirmDelete = confirmDeleteDay,
                         onDeleteRequest = { confirmDeleteDay = true },
                         onDeleteCancel = { confirmDeleteDay = false },
@@ -247,6 +262,21 @@ private fun TrainCueApp() {
                             screen = Screen.Day
                         },
                         onBack = { screen = Screen.RunOptions },
+                    )
+                }
+                Screen.ExercisePreview -> activeWorkoutSelection?.let { selection ->
+                    ExercisePreviewScreen(
+                        workout = selection.workout,
+                        isCompleted = completedItems[selection.item.workoutCompletionKey(selection.workout)] == true,
+                        onToggleCompleted = {
+                            toggleCompleted(selection.item.workoutCompletionKey(selection.workout))
+                            activeWorkoutSelection = null
+                            screen = Screen.Day
+                        },
+                        onClose = {
+                            activeWorkoutSelection = null
+                            screen = Screen.Day
+                        },
                     )
                 }
             }
@@ -454,6 +484,11 @@ private fun PlanItemRow(item: PlanItem, isCompleted: Boolean, onClick: () -> Uni
 private fun WorkoutRow(workout: WorkoutItem, isCompleted: Boolean, onToggle: () -> Unit) {
     val backgroundColor = if (isCompleted) Color(0xCC123D2F) else Color(0x88101820)
     val repsColor = if (isCompleted) Color(0xFFA5D6A7) else Color(0xFFCFD8DC)
+    val statusText = when {
+        isCompleted -> "Done"
+        !workout.imageAsset.isNullOrBlank() -> "Preview"
+        else -> "${workout.sets} x ${workout.reps}"
+    }
     Row(
         modifier = Modifier
             .fillMaxWidth(0.84f)
@@ -465,7 +500,67 @@ private fun WorkoutRow(workout: WorkoutItem, isCompleted: Boolean, onToggle: () 
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Text(workout.name, modifier = Modifier.weight(1f), fontSize = 12.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        Text(if (isCompleted) "Done" else "${workout.sets} x ${workout.reps}", fontSize = 12.sp, color = repsColor, maxLines = 1)
+        Text(statusText, fontSize = 12.sp, color = repsColor, maxLines = 1)
+    }
+}
+
+@Composable
+private fun ExercisePreviewScreen(
+    workout: WorkoutItem,
+    isCompleted: Boolean,
+    onToggleCompleted: () -> Unit,
+    onClose: () -> Unit,
+) {
+    val context = LocalContext.current
+    val imageResId = remember(workout.imageAsset) {
+        resolveDrawableResId(context, workout.imageAsset)
+    }
+    val assetLabel = remember(workout.imageAsset) { workout.imageAsset.prettyAssetLabel() }
+    CenterColumn {
+        Text(workout.name, fontSize = 18.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+        Text("${workout.sets} x ${workout.reps}", fontSize = 12.sp, color = Color(0xFFCFD8DC))
+        Spacer(Modifier.height(10.dp))
+        Box(
+            modifier = Modifier
+                .size(112.dp)
+                .clip(RoundedCornerShape(18.dp))
+                .background(Color(0xCC101820), RoundedCornerShape(18.dp))
+                .border(1.dp, Color(0x441DE9B6), RoundedCornerShape(18.dp)),
+            contentAlignment = Alignment.Center,
+        ) {
+            if (imageResId != null) {
+                Image(
+                    painter = painterResource(id = imageResId),
+                    contentDescription = workout.name,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier.size(92.dp),
+                )
+            } else {
+                Text("No image", fontSize = 12.sp, color = Color(0xFFFFCC80))
+            }
+        }
+        Spacer(Modifier.height(6.dp))
+        Text(assetLabel, fontSize = 11.sp, color = Color(0xFF90A4AE), textAlign = TextAlign.Center)
+        Spacer(Modifier.height(8.dp))
+        Text(
+            if (isCompleted) "Already marked complete" else "View first, then choose",
+            fontSize = 11.sp,
+            color = Color(0xFFB0BEC5),
+            textAlign = TextAlign.Center,
+        )
+        Spacer(Modifier.height(8.dp))
+        Chip(
+            modifier = Modifier.fillMaxWidth(0.74f),
+            onClick = onToggleCompleted,
+            label = { Text(if (isCompleted) "Undo complete" else "Mark complete") },
+            colors = ChipDefaults.primaryChipColors(),
+        )
+        Chip(
+            modifier = Modifier.fillMaxWidth(0.62f),
+            onClick = onClose,
+            label = { Text("Close") },
+            colors = ChipDefaults.secondaryChipColors(),
+        )
     }
 }
 
@@ -603,7 +698,15 @@ private fun starterPlan(): List<TrainingDay> {
             "Run + strength",
             listOf(
                 PlanItem("w1-thu-run", "run", "2 mi run", distanceKm = 2 * MILES_TO_KM),
-                PlanItem("w1-thu-strength", "strength", "Upper body strength", workouts = listOf(WorkoutItem("Bench Press", 3, "10"), WorkoutItem("Shoulder Press", 3, "8-10"))),
+                PlanItem(
+                    "w1-thu-strength",
+                    "strength",
+                    "Upper body strength",
+                    workouts = listOf(
+                        WorkoutItem("Bench Press", 3, "10", imageAsset = "bench_press"),
+                        WorkoutItem("Shoulder Press", 3, "8-10", imageAsset = "shoulder_press"),
+                    ),
+                ),
             ),
         ),
     )
@@ -740,6 +843,7 @@ private fun JSONObject.toWorkoutItem(): WorkoutItem {
         sets = getInt("sets").coerceAtLeast(1),
         reps = get("reps").toString(),
         note = optString("note", ""),
+        imageAsset = optString("imageAsset", null),
     )
 }
 
@@ -774,8 +878,24 @@ private fun WorkoutItem.toJson(): JSONObject {
         .put("sets", sets)
         .put("reps", reps)
         .put("note", note)
+        .also { json -> imageAsset?.takeIf { it.isNotBlank() }?.let { json.put("imageAsset", it) } }
 }
 
 private fun formatDistanceKm(km: Double): String {
     return if (km < 10) "${((km * 10).roundToInt() / 10.0)} km" else "${km.roundToInt()} km"
+}
+
+private fun resolveDrawableResId(context: Context, assetName: String?): Int? {
+    val cleaned = assetName?.trim().orEmpty()
+    if (cleaned.isBlank()) return null
+    val resId = context.resources.getIdentifier(cleaned, "drawable", context.packageName)
+    return resId.takeIf { it != 0 }
+}
+
+private fun String?.prettyAssetLabel(): String {
+    val cleaned = this?.trim().orEmpty()
+    if (cleaned.isBlank()) return "Drawable asset"
+    return cleaned.replace('_', ' ').split(Regex("\\s+")).joinToString(" ") { part ->
+        part.lowercase().replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
+    }
 }

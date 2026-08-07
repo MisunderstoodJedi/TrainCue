@@ -12,59 +12,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Reverse lunge",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 4,
             "reps": "30 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -123,7 +133,8 @@
           {
             "name": "30 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -145,29 +156,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (light)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -223,25 +239,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -319,7 +339,8 @@
           {
             "name": "30 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -353,59 +374,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Reverse lunge",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 4,
             "reps": "30 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -464,7 +495,8 @@
           {
             "name": "30 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -486,29 +518,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (light)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -564,25 +601,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -660,7 +701,8 @@
           {
             "name": "30 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -694,59 +736,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Reverse lunge",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 4,
             "reps": "30 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -805,7 +857,8 @@
           {
             "name": "35 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -827,29 +880,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (light)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -905,25 +963,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -1001,7 +1063,8 @@
           {
             "name": "30 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -1035,59 +1098,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Reverse lunge",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "15-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 4,
             "reps": "30 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -1146,7 +1219,8 @@
           {
             "name": "35 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -1168,29 +1242,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (light)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -1246,25 +1325,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB Romanian deadlift",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -1342,7 +1425,8 @@
           {
             "name": "40 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -1376,59 +1460,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 5,
             "reps": "40 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -1487,7 +1581,8 @@
           {
             "name": "40 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -1509,29 +1604,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -1587,25 +1687,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -1683,7 +1787,8 @@
           {
             "name": "40 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -1717,59 +1822,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 5,
             "reps": "40 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -1828,7 +1943,8 @@
           {
             "name": "40 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -1850,29 +1966,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -1928,25 +2049,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -2024,7 +2149,8 @@
           {
             "name": "50 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -2058,59 +2184,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 5,
             "reps": "40 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -2169,7 +2305,8 @@
           {
             "name": "45 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -2191,29 +2328,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -2269,25 +2411,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -2365,7 +2511,8 @@
           {
             "name": "50 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -2399,59 +2546,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "15-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 5,
             "reps": "40 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -2510,7 +2667,8 @@
           {
             "name": "45 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -2532,29 +2690,34 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate)",
             "sets": 2,
             "reps": "6/leg",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -2610,25 +2773,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -2706,7 +2873,8 @@
           {
             "name": "60 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -2740,59 +2908,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -2851,7 +3029,8 @@
           {
             "name": "45 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -2873,18 +3052,21 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -2895,7 +3077,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -2951,25 +3134,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -3047,7 +3234,8 @@
           {
             "name": "60 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -3081,59 +3269,69 @@
           {
             "name": "Stretch & strengthen",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "10 min easy mobility",
             "sets": 1,
-            "reps": "calves, hips, hamstrings and upper back"
+            "reps": "calves, hips, hamstrings and upper back",
+            "imageAsset": "mobility"
           },
           {
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           },
           {
             "name": "Stop fresh; this supports the runs",
@@ -3192,7 +3390,8 @@
           {
             "name": "30 min cross",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Bike, rower, brisk walk or gentle mix",
@@ -3214,18 +3413,21 @@
             "name": "Rower",
             "sets": 2,
             "reps": "250 m smooth",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 2,
             "reps": "10-15 easy reps",
-            "note": "Do 1 round if needed."
+            "note": "Do 1 round if needed.",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -3236,7 +3438,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "Rest 60-90 sec between rounds, or longer if breathing gets ragged",
@@ -3292,25 +3495,29 @@
             "name": "KB floor press",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 2,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 2,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 2,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           }
         ]
       }
@@ -3419,48 +3626,56 @@
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -3479,12 +3694,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -3532,12 +3749,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -3567,22 +3786,26 @@
           {
             "name": "5 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "500 m"
+            "reps": "500 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -3592,7 +3815,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -3624,7 +3848,8 @@
             "name": "Goblet squat-to-press",
             "sets": 3,
             "reps": "10-12",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "30-45 min easy bike or walk",
@@ -3634,7 +3859,8 @@
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -3653,12 +3879,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -3683,48 +3911,56 @@
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "15-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -3743,12 +3979,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -3796,12 +4034,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -3831,22 +4071,26 @@
           {
             "name": "5 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "500 m"
+            "reps": "500 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -3856,7 +4100,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "12 reps"
+            "reps": "12 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -3888,7 +4133,8 @@
             "name": "Goblet squat-to-press",
             "sets": 3,
             "reps": "10-12",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "30-45 min easy bike or walk",
@@ -3898,7 +4144,8 @@
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -3917,12 +4164,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -3947,48 +4196,56 @@
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -4007,12 +4264,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4065,12 +4324,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4100,22 +4361,26 @@
           {
             "name": "4 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "500 m"
+            "reps": "500 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -4125,7 +4390,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -4157,17 +4423,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -4186,12 +4455,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4216,48 +4487,56 @@
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -4276,12 +4555,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4334,12 +4615,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4369,22 +4652,26 @@
           {
             "name": "4 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "500 m"
+            "reps": "500 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -4394,7 +4681,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -4426,17 +4714,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -4455,12 +4746,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4485,48 +4778,56 @@
             "name": "KB floor press",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 4,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 4,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 4,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 4,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -4545,12 +4846,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4603,12 +4906,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4638,22 +4943,26 @@
           {
             "name": "4 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "500 m"
+            "reps": "500 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -4663,7 +4972,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -4695,17 +5005,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -4724,12 +5037,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4754,48 +5069,56 @@
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "15-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 6,
             "reps": "50 m",
-            "note": ""
+            "note": "",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -4814,12 +5137,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4872,12 +5197,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -4907,22 +5234,26 @@
           {
             "name": "4 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "500 m"
+            "reps": "500 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (moderate-heavy)",
@@ -4932,7 +5263,8 @@
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -4964,17 +5296,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -4993,12 +5328,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5023,47 +5360,55 @@
             "name": "KB floor press",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 5,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 5,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 5,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -5082,12 +5427,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5140,12 +5487,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5175,32 +5524,38 @@
           {
             "name": "5 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -5232,17 +5587,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -5261,12 +5619,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5291,47 +5651,55 @@
             "name": "KB floor press",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 5,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 5,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 5,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -5350,12 +5718,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5408,12 +5778,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5443,32 +5815,38 @@
           {
             "name": "5 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -5500,17 +5878,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -5529,12 +5910,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5559,47 +5942,55 @@
             "name": "KB floor press",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 5,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 5,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 5,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -5618,12 +6009,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5676,12 +6069,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5711,32 +6106,38 @@
           {
             "name": "5 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -5768,17 +6169,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -5797,12 +6201,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5827,47 +6233,55 @@
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "15-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -5886,12 +6300,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5944,12 +6360,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -5979,32 +6397,38 @@
           {
             "name": "5 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -6036,17 +6460,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -6065,12 +6492,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6095,47 +6524,55 @@
             "name": "KB floor press",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 5,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 5,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 5,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -6154,12 +6591,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6212,12 +6651,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6247,32 +6688,38 @@
           {
             "name": "3 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -6304,17 +6751,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -6333,12 +6783,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6363,47 +6815,55 @@
             "name": "KB floor press",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 5,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 5,
             "reps": "8-12 with 2 sec lower",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 5,
             "reps": "12-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": ""
+            "note": "",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 5,
             "reps": "20-30",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -6422,12 +6882,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6480,12 +6942,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6515,32 +6979,38 @@
           {
             "name": "3 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -6572,17 +7042,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -6601,12 +7074,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6631,47 +7106,55 @@
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "15-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -6690,12 +7173,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6748,12 +7233,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6783,32 +7270,38 @@
           {
             "name": "3 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -6840,17 +7333,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -6869,12 +7365,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -6899,47 +7397,55 @@
             "name": "KB floor press",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "kb_floor_press"
           },
           {
             "name": "Pull-up progression or band-assisted pull-up",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "pullup"
           },
           {
             "name": "Double-KB sumo deadlift",
             "sets": 3,
             "reps": "8-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "romanian_deadlift"
           },
           {
             "name": "Goblet squat",
             "sets": 3,
             "reps": "10-12",
-            "note": ""
+            "note": "",
+            "imageAsset": "goblet_squat"
           },
           {
             "name": "Bulgarian split squat",
             "sets": 3,
             "reps": "8-12/leg",
-            "note": "Minimum 2 set(s)."
+            "note": "Minimum 2 set(s).",
+            "imageAsset": "lunge"
           },
           {
             "name": "KB swings",
             "sets": 3,
             "reps": "15-20",
-            "note": ""
+            "note": "",
+            "imageAsset": "kettlebell_swing"
           },
           {
             "name": "Core finisher",
             "sets": 1,
-            "reps": "leg raises, plank or dead bug 2-3 sets"
+            "reps": "leg raises, plank or dead bug 2-3 sets",
+            "imageAsset": "core"
           },
           {
             "name": "Farmers carry",
             "sets": 1,
-            "reps": "200 m broken"
+            "reps": "200 m broken",
+            "imageAsset": "farmers_carry"
           }
         ]
       }
@@ -6958,12 +7464,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -7016,12 +7524,14 @@
           {
             "name": "10-20 min easy walk",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
@@ -7051,32 +7561,38 @@
           {
             "name": "3 rounds at controlled effort",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "core"
           },
           {
             "name": "Rower",
             "sets": 1,
-            "reps": "750-1000 m"
+            "reps": "750-1000 m",
+            "imageAsset": "rower"
           },
           {
             "name": "Band SkiErg pulls",
             "sets": 1,
-            "reps": "30 reps"
+            "reps": "30 reps",
+            "imageAsset": "ski_erg"
           },
           {
             "name": "Sled substitute",
             "sets": 1,
-            "reps": "incline treadmill march and anchored band pulls"
+            "reps": "incline treadmill march and anchored band pulls",
+            "imageAsset": "sled_push"
           },
           {
             "name": "Water bag lunges (race-practice)",
             "sets": 1,
-            "reps": "12/leg"
+            "reps": "12/leg",
+            "imageAsset": "lunge"
           },
           {
             "name": "Goblet squat-to-press",
             "sets": 1,
-            "reps": "20 reps"
+            "reps": "20 reps",
+            "imageAsset": "squat_to_press"
           }
         ]
       }
@@ -7108,17 +7624,20 @@
             "name": "Goblet squat-to-press",
             "sets": 4,
             "reps": "15-20",
-            "note": "Minimum 3 set(s)."
+            "note": "Minimum 3 set(s).",
+            "imageAsset": "squat_to_press"
           },
           {
             "name": "20-30 min easy bike plus mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "Shoulders, hips and calves",
             "sets": 1,
-            "reps": "10 min mobility"
+            "reps": "10 min mobility",
+            "imageAsset": "mobility"
           }
         ]
       }
@@ -7137,12 +7656,14 @@
           {
             "name": "20-30 min relaxed walk or bike",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "cardio"
           },
           {
             "name": "5-10 min hips, calves, hamstrings and upper-back mobility",
             "sets": 1,
-            "reps": "complete"
+            "reps": "complete",
+            "imageAsset": "mobility"
           },
           {
             "name": "No fatigue chasing today",
