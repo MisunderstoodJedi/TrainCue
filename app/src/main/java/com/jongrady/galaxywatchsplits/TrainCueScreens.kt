@@ -645,6 +645,7 @@ private fun WatchList(content: ScalingLazyListScope.() -> Unit) {
         ScalingLazyColumn(
             modifier = Modifier.fillMaxSize(),
             state = state,
+            autoCentering = null,
             horizontalAlignment = Alignment.CenterHorizontally,
             contentPadding = PaddingValues(top = 34.dp, bottom = 30.dp),
             verticalArrangement = Arrangement.spacedBy(5.dp),
