@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -383,6 +384,9 @@ internal fun SessionScreen(
     stepIndex: Int,
     stepCount: Int,
     completedSets: Int,
+    isAmbient: Boolean,
+    ambientUpdateToken: Int,
+    burnInProtectionRequired: Boolean,
     onComplete: () -> Unit,
     onRun: () -> Unit,
     onDetails: (SessionStep.Exercise) -> Unit,
@@ -390,6 +394,19 @@ internal fun SessionScreen(
     onSkip: () -> Unit,
     onExit: () -> Unit,
 ) {
+    if (isAmbient) {
+        AmbientSessionScreen(
+            day = day,
+            step = step,
+            stepIndex = stepIndex,
+            stepCount = stepCount,
+            completedSets = completedSets,
+            ambientUpdateToken = ambientUpdateToken,
+            burnInProtectionRequired = burnInProtectionRequired,
+        )
+        return
+    }
+
     Box(modifier = Modifier.fillMaxSize().background(TrainCueColors.Background)) {
         TimeText()
         Column(
@@ -460,6 +477,86 @@ internal fun SessionScreen(
                     Icon(Icons.Default.SkipNext, contentDescription = "Skip", tint = TrainCueColors.Muted)
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun AmbientSessionScreen(
+    day: TrainingDay,
+    step: SessionStep,
+    stepIndex: Int,
+    stepCount: Int,
+    completedSets: Int,
+    ambientUpdateToken: Int,
+    burnInProtectionRequired: Boolean,
+) {
+    val movement = if (burnInProtectionRequired) {
+        when (ambientUpdateToken % 4) {
+            0 -> (-2).dp to (-2).dp
+            1 -> 2.dp to (-2).dp
+            2 -> 2.dp to 2.dp
+            else -> (-2).dp to 2.dp
+        }
+    } else {
+        0.dp to 0.dp
+    }
+
+    Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
+        TimeText()
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .offset(x = movement.first, y = movement.second)
+                .padding(horizontal = 28.dp, vertical = 34.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Text(
+                day.title.uppercase(),
+                fontSize = 9.sp,
+                color = Color(0xFF9A9A9A),
+                fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                when (step) {
+                    is SessionStep.Exercise -> {
+                        Text(
+                            step.workout.name,
+                            fontSize = 19.sp,
+                            color = Color.White,
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Center,
+                            maxLines = 3,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        Text(step.workout.prescription(), fontSize = 14.sp, color = Color(0xFFBDBDBD), textAlign = TextAlign.Center)
+                        if (step.workout.sets > 1) {
+                            Text(
+                                "SET ${(completedSets + 1).coerceAtMost(step.workout.sets)} / ${step.workout.sets}",
+                                fontSize = 12.sp,
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold,
+                            )
+                        }
+                    }
+                    is SessionStep.Run -> {
+                        Text(step.block.label, fontSize = 21.sp, color = Color.White, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, maxLines = 2)
+                        Text(step.block.distanceKm?.let(::formatDistanceKm) ?: "TIMED RUN", fontSize = 14.sp, color = Color(0xFFBDBDBD))
+                    }
+                    is SessionStep.Simple -> {
+                        Text(step.block.label, fontSize = 21.sp, color = Color.White, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, maxLines = 3)
+                    }
+                }
+            }
+            Text(
+                "${stepIndex + 1} / $stepCount",
+                fontSize = 11.sp,
+                color = Color(0xFF9A9A9A),
+                fontWeight = FontWeight.Bold,
+            )
         }
     }
 }

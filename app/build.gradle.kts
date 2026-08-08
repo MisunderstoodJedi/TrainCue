@@ -12,8 +12,8 @@ android {
         applicationId = "com.jongrady.traincue"
         minSdk = 30
         targetSdk = 35
-        versionCode = 4
-        versionName = "3.0.0"
+        versionCode = 5
+        versionName = "3.0.1"
         resValue("string", "app_version", versionName ?: "dev")
     }
 
@@ -41,6 +41,7 @@ dependencies {
     implementation("androidx.wear.compose:compose-material:1.4.1")
     implementation("androidx.wear.compose:compose-foundation:1.4.1")
     implementation("androidx.wear:wear:1.3.0")
+    implementation("androidx.wear:wear-ongoing:1.1.0")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
     testImplementation("junit:junit:4.13.2")

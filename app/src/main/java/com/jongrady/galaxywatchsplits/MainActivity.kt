@@ -1,25 +1,76 @@
 package com.jongrady.traincue
 
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import androidx.core.content.ContextCompat
+import androidx.wear.ambient.AmbientLifecycleObserver
 import kotlinx.coroutines.delay
 import java.util.UUID
 
 class MainActivity : ComponentActivity() {
+    private var isAmbient by mutableStateOf(false)
+    private var ambientUpdateToken by mutableIntStateOf(0)
+    private var burnInProtectionRequired by mutableStateOf(false)
+    private var resumeRequest by mutableIntStateOf(0)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { TrainCueApp() }
+        lifecycle.addObserver(
+            AmbientLifecycleObserver(
+                this,
+                object : AmbientLifecycleObserver.AmbientLifecycleCallback {
+                    override fun onEnterAmbient(ambientDetails: AmbientLifecycleObserver.AmbientDetails) {
+                        burnInProtectionRequired = ambientDetails.burnInProtectionRequired
+                        isAmbient = true
+                    }
+
+                    override fun onUpdateAmbient() {
+                        ambientUpdateToken++
+                    }
+
+                    override fun onExitAmbient() {
+                        isAmbient = false
+                    }
+                },
+            ),
+        )
+        handleResumeIntent(intent)
+        setContent {
+            TrainCueApp(
+                isAmbient = isAmbient,
+                ambientUpdateToken = ambientUpdateToken,
+                burnInProtectionRequired = burnInProtectionRequired,
+                resumeRequest = resumeRequest,
+            )
+        }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleResumeIntent(intent)
+    }
+
+    private fun handleResumeIntent(intent: Intent?) {
+        if (intent?.getBooleanExtra(EXTRA_RESUME_SESSION, false) == true) resumeRequest++
     }
 }
 
@@ -37,10 +88,16 @@ private enum class AppScreen {
 }
 
 @Composable
-private fun TrainCueApp() {
+private fun TrainCueApp(
+    isAmbient: Boolean,
+    ambientUpdateToken: Int,
+    burnInProtectionRequired: Boolean,
+    resumeRequest: Int,
+) {
     val context = LocalContext.current
     val repository = remember { TrainingRepository(context) }
     val cues = remember { TrainingCuePlayer(context) }
+    val ongoingActivity = remember { TrainingOngoingActivity(context) }
     val screens = remember { mutableStateListOf(AppScreen.Splash) }
 
     var days by remember { mutableStateOf(emptyList<TrainingDay>()) }
@@ -53,6 +110,17 @@ private fun TrainCueApp() {
     var selectedRunMode by remember { mutableStateOf(RunMode.OUTDOOR) }
     var syncRequested by remember { mutableStateOf(false) }
     var syncMessage by remember { mutableStateOf("Plan saved offline") }
+    var dataLoaded by remember { mutableStateOf(false) }
+    var notificationPermissionGranted by remember {
+        mutableStateOf(
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU ||
+                ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED,
+        )
+    }
+
+    val notificationPermissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        notificationPermissionGranted = granted
+    }
 
     val screen = screens.last()
     val selectedDay = days.firstOrNull { it.id == selectedDayId }
@@ -86,7 +154,14 @@ private fun TrainCueApp() {
         repository.saveCompletedSteps(next)
     }
 
+    fun ensureNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !notificationPermissionGranted) {
+            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
+    }
+
     fun startSession(day: TrainingDay) {
+        ensureNotificationPermission()
         selectedDayId = day.id
         val existing = activeSession?.takeIf { it.dayId == day.id }
         if (existing == null) {
@@ -179,9 +254,29 @@ private fun TrainCueApp() {
             days = starterPlan()
             repository.saveDays(days)
         }
+        dataLoaded = true
         delay(850)
-        screens.clear()
-        screens.add(AppScreen.Home)
+        if (screens.lastOrNull() == AppScreen.Splash) {
+            screens.clear()
+            screens.add(AppScreen.Home)
+        }
+    }
+
+    LaunchedEffect(resumeRequest, dataLoaded) {
+        if (resumeRequest > 0 && dataLoaded && activeSession != null) {
+            selectedDayId = activeSession?.dayId
+            screens.clear()
+            screens.add(AppScreen.Session)
+        }
+    }
+
+    LaunchedEffect(activeSession, sessionDay, notificationPermissionGranted) {
+        val session = activeSession
+        val day = sessionDay
+        when {
+            session == null -> ongoingActivity.cancel()
+            day != null && notificationPermissionGranted -> runCatching { ongoingActivity.show(day, session) }
+        }
     }
 
     LaunchedEffect(syncRequested) {
@@ -218,7 +313,7 @@ private fun TrainCueApp() {
                 activeDay = days.firstOrNull { it.id == activeSession?.dayId },
                 syncMessage = syncMessage,
                 onStart = { day -> startSession(day) },
-                onResume = { day -> selectedDayId = day.id; push(AppScreen.Session) },
+                onResume = { day -> ensureNotificationPermission(); selectedDayId = day.id; push(AppScreen.Session) },
                 onCancelSession = { saveSession(null) },
                 onPlan = { push(AppScreen.Plan) },
                 onHistory = { push(AppScreen.History) },
@@ -256,6 +351,9 @@ private fun TrainCueApp() {
                         stepIndex = session.stepIndex,
                         stepCount = steps.size,
                         completedSets = session.completedSets[step.key] ?: 0,
+                        isAmbient = isAmbient,
+                        ambientUpdateToken = ambientUpdateToken,
+                        burnInProtectionRequired = burnInProtectionRequired,
                         onComplete = { finishCurrentStep(step) },
                         onRun = { push(AppScreen.RunMode) },
                         onDetails = { exercise -> selectedExercise = exercise; push(AppScreen.ExerciseDetail) },

@@ -19,6 +19,9 @@ The app combines the original ideas behind PaceCue and LiftCue in one offline-ca
 - Exercise images and dedicated exercise-detail views
 - Manual GitHub sync with an offline cached plan
 - Existing v2 progress is preserved when upgrading
+- Active workouts return to the same exercise after display sleep and wake
+- Always-On Display users get a low-power ambient exercise view
+- A tappable ongoing-workout indicator returns directly to the saved step
 
 ## Visual Walkthrough
 
@@ -29,7 +32,8 @@ These screenshots were captured from TrainCue v3 running on a Galaxy Watch.
 TrainCue opens with a short launch screen and then goes directly to **Up next**. The Home screen shows the next unfinished workout, overall plan progress, and shortcuts for Plan, History, and Sync. If a workout is interrupted, the same area becomes **In progress** with Resume and Cancel controls.
 
 <p align="center">
-  <img src="docs/screenshots/splash.png" width="320" alt="TrainCue v3 launch screen">
+  <img src="docs/screenshots/splash.png" width="240" alt="TrainCue v3 launch screen">
+  <img src="docs/screenshots/home.png" width="240" alt="TrainCue v3 compact Home screen">
 </p>
 
 ### 2. Browse the Plan
@@ -51,6 +55,8 @@ Select a day to review every block before starting. Run days show all nested ins
 ### 4. Follow the Guided Session
 
 Tap **Start workout** to enter the guided view. The current exercise, image, prescription, session progress, previous, complete, and skip controls fit on one screen. Completing a set advances the set counter; completing the final set advances to the next exercise.
+
+With Always-On Display enabled, TrainCue switches to a low-power ambient layout that keeps the movement, prescription, set number, and session progress visible. With Always-On Display disabled, the panel turns off normally and returns to the same exercise when the watch wakes. If you leave the app during a session, the ongoing-workout indicator on the watch face and launcher returns directly to that exercise.
 
 <p align="center">
   <img src="docs/screenshots/guided-session.png" width="320" alt="TrainCue guided exercise session">
@@ -142,6 +148,10 @@ Open the repository in Android Studio and run the `app` configuration on a Wear 
 The debug APK is generated at `app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Version History
+
+### v3.0.1
+
+Added an ambient guided-workout display, Wear OS ongoing-workout integration, notification-based quick return, and direct routing back to the active exercise.
 
 ### v3.0.0
 
