@@ -15,6 +15,7 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import android.speech.tts.TextToSpeech
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
@@ -206,6 +207,27 @@ private fun TrainCueApp() {
         setCompleted(key, completedItems[key] != true)
     }
 
+    fun goBack() {
+        when (screen) {
+            Screen.Day -> {
+                confirmDeleteDay = false
+                screen = Screen.Plan
+            }
+            Screen.RunOptions -> screen = Screen.Day
+            Screen.RunTracker -> screen = Screen.RunOptions
+            Screen.ExercisePreview -> {
+                activeWorkoutSelection = null
+                screen = Screen.Day
+            }
+            Screen.Splash,
+            Screen.Plan -> Unit
+        }
+    }
+
+    BackHandler(enabled = screen != Screen.Splash && screen != Screen.Plan) {
+        goBack()
+    }
+
     MaterialTheme {
         AppBackdrop {
             TimeText()
@@ -254,8 +276,7 @@ private fun TrainCueApp() {
                             screen = Screen.Plan
                         },
                         onBack = {
-                            confirmDeleteDay = false
-                            screen = Screen.Plan
+                            goBack()
                         },
                     )
                 }
@@ -267,7 +288,7 @@ private fun TrainCueApp() {
                             setCompleted(run.completionKey(), true)
                             screen = Screen.Day
                         },
-                        onBack = { screen = Screen.Day },
+                        onBack = { goBack() },
                     )
                 }
                 Screen.RunTracker -> activeRun?.let { run ->
@@ -278,7 +299,7 @@ private fun TrainCueApp() {
                             setCompleted(run.completionKey(), true)
                             screen = Screen.Day
                         },
-                        onBack = { screen = Screen.RunOptions },
+                        onBack = { goBack() },
                     )
                 }
                 Screen.ExercisePreview -> activeWorkoutSelection?.let { selection ->
@@ -297,7 +318,7 @@ private fun TrainCueApp() {
                         },
                         onClose = {
                             activeWorkoutSelection = null
-                            screen = Screen.Day
+                            goBack()
                         },
                     )
                 }
@@ -401,37 +422,32 @@ private fun DayScreen(
         item { Text(day.title, fontSize = 20.sp, fontWeight = FontWeight.Bold) }
         item { Text(day.subtitle, fontSize = 12.sp, color = Color(0xFFCFD8DC)) }
         day.items.forEach { item ->
-            when (item.type.lowercase()) {
-                "run" -> item {
-                    PlanItemRow(
-                        item = item,
-                        isCompleted = completedItems[item.completionKey()] == true,
-                        onClick = { onRun(item) },
-                    )
+            val type = item.type.lowercase()
+            val itemCompleted = when {
+                type == "strength" && item.workouts.isNotEmpty() -> item.workouts.all { workout ->
+                    completedItems.isWorkoutCompleted(item, workout)
                 }
-                "strength" -> {
-                    item {
-                        PlanItemRow(
-                            item = item,
-                            isCompleted = item.workouts.isNotEmpty() && item.workouts.all { workout ->
-                                completedItems.isWorkoutCompleted(item, workout)
-                            },
-                            onClick = { },
-                        )
-                    }
-                    items(item.workouts) { workout ->
-                        WorkoutRow(
-                            workout = workout,
-                            isCompleted = completedItems.isWorkoutCompleted(item, workout),
-                            onToggle = { onToggleWorkout(item, workout) },
-                        )
-                    }
-                }
-                else -> item {
-                    PlanItemRow(
-                        item = item,
-                        isCompleted = completedItems[item.completionKey()] == true,
-                        onClick = { onToggleItem(item) },
+                else -> completedItems[item.completionKey()] == true
+            }
+            item {
+                PlanItemRow(
+                    item = item,
+                    isCompleted = itemCompleted,
+                    onClick = {
+                        when (type) {
+                            "run" -> onRun(item)
+                            "strength" -> Unit
+                            else -> onToggleItem(item)
+                        }
+                    },
+                )
+            }
+            if (item.workouts.isNotEmpty()) {
+                items(item.workouts) { workout ->
+                    WorkoutRow(
+                        workout = workout,
+                        isCompleted = completedItems.isWorkoutCompleted(item, workout),
+                        onToggle = { onToggleWorkout(item, workout) },
                     )
                 }
             }
@@ -541,6 +557,10 @@ private fun ExercisePreviewScreen(
         resolveDrawableResId(context, workout.imageAsset)
     }
     var imageExpanded by remember { mutableStateOf(false) }
+
+    BackHandler(enabled = imageExpanded) {
+        imageExpanded = false
+    }
 
     if (imageExpanded) {
         Box(
