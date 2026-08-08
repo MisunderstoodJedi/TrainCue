@@ -1,88 +1,80 @@
-# TrainCue
+# TrainCue v3
 
-A Wear OS training-plan companion for Galaxy Watch.
+TrainCue is a watch-first Wear OS training companion for running, strength, mobility, recovery, cross-training, and mixed HYROX-style plans. It is designed for a Galaxy Watch-sized screen: open the app, see the next unfinished day, start the session, and work through it one cue at a time.
 
-TrainCue combines the ideas from the other two watch apps:
+The app combines the original ideas behind PaceCue and LiftCue in one offline-capable training plan.
 
-- **PaceCue** is for interval run/walk sessions with beeps, vibration, and spoken phase cues.
-- **LiftCue** is for strength routines with exercise, sets, reps, and tap-to-complete rows.
-- **TrainCue** is the combined plan app: it can show a training day containing runs, strength work, rest, cross-training, or any other plan item.
+## What Changed in v3
 
-## Version 3
-
-- Watch-first home screen with the next unfinished workout
-- Resumable guided sessions with per-set progress
+- New **Up next** home screen focused on the first unfinished training day
+- Compact layout that begins directly below the watch clock
+- Guided exercise sessions with current-step and per-set progress
+- Active sessions are saved after every action and can be resumed or cancelled
 - Outdoor GPS, treadmill timer, and no-tracking run modes
-- Complete run instructions remain visible in each run block
-- Session history with duration, completion, effort, and run distance
-- Hardware Back navigation on every secondary screen
-- Offline progress and active-session persistence
+- Spoken kilometre cues, sound, and vibration during outdoor runs
+- Complete run instructions remain visible, including warm-up and cool-down cues
 - Full 168-day plan browser with completion status
+- Session history with duration, completed steps, effort, run mode, and distance
+- Hardware Back navigation throughout the app
+- Exercise images and dedicated exercise-detail views
+- Manual GitHub sync with an offline cached plan
+- Existing v2 progress is preserved when upgrading
 
-## Earlier Version 2 Features
+## Visual Walkthrough
 
-- Manual GitHub update from `routines.json`
-- Local cached plan when GitHub is unavailable
-- Tap-to-complete plan items
-- Delete a day from the local watch plan after finishing it
-- Strength items can include exercise sets and reps
-- Individual strength exercises can be ticked off separately
-- Optional image preview for exercises with local app assets
-- Image-linked exercises open a preview screen before completion
-- Run items are identified by `"type": "run"`
-- Outdoor run tracking uses watch location when available
-- Spoken run cues announce each kilometre and completion
-- Treadmill/manual completion option for indoor runs
+These screenshots were captured from TrainCue v3 running on a Galaxy Watch.
 
-## JSON format
+### 1. Launch and Home
 
-TrainCue does not need to know a specific training plan. Add whatever plan you want to `routines.json`.
+TrainCue opens with a short launch screen and then goes directly to **Up next**. The Home screen shows the next unfinished workout, overall plan progress, and shortcuts for Plan, History, and Sync. If a workout is interrupted, the same area becomes **In progress** with Resume and Cancel controls.
 
-The important run identifier is:
+<p align="center">
+  <img src="docs/screenshots/splash.png" width="320" alt="TrainCue v3 launch screen">
+</p>
 
-```json
-"type": "run"
-```
+### 2. Browse the Plan
 
-Run items can use either `distanceMiles` or `distanceKm`:
+Open **Plan** to browse all training days. Completed days use a check mark and unfinished days use an icon matching the workout type. Touch scrolling and the hardware Back button work naturally from this view.
 
-```json
-{
-  "id": "w1-tue-run",
-  "type": "run",
-  "label": "2 mi run",
-  "distanceMiles": 2
-}
-```
+<p align="center">
+  <img src="docs/screenshots/plan.png" width="320" alt="TrainCue training plan browser">
+</p>
 
-Strength items can include workouts:
+### 3. Review the Workout
 
-```json
-{
-  "id": "w1-thu-strength",
-  "type": "strength",
-  "label": "Upper body strength",
-  "workouts": [
-    { "name": "Bench Press", "sets": 3, "reps": "10" },
-    { "name": "Shoulder Press", "sets": 3, "reps": "8-10" }
-  ]
-}
-```
+Select a day to review every block before starting. Run days show all nested instructions rather than hiding them behind the main run item. For example, Week 1 Thursday includes the run target, warm-up walk, conversational-effort cue, and cool-down walk.
 
-Exercises can optionally point at a drawable asset bundled in the app. The `imageAsset` value should match a drawable resource name in `app/src/main/res/drawable`:
+<p align="center">
+  <img src="docs/screenshots/workout-details.png" width="320" alt="Week 1 Thursday complete run instructions">
+</p>
 
-```json
-{
-  "name": "Bench Press",
-  "sets": 3,
-  "reps": "10",
-  "imageAsset": "bench_press"
-}
-```
+### 4. Follow the Guided Session
 
-If an exercise has `imageAsset`, tapping it opens the image first. You can then close the image or mark the exercise complete.
+Tap **Start workout** to enter the guided view. The current exercise, image, prescription, session progress, previous, complete, and skip controls fit on one screen. Completing a set advances the set counter; completing the final set advances to the next exercise.
 
-Full day example:
+<p align="center">
+  <img src="docs/screenshots/guided-session.png" width="320" alt="TrainCue guided exercise session">
+</p>
+
+### 5. Run Outside or Indoors
+
+When the guided session reaches a run block, TrainCue shows the complete run plan and offers three modes:
+
+- **Outdoor** tracks GPS distance, elapsed time, average pace, and GPS accuracy.
+- **Treadmill** runs a timer and logs the planned distance when finished.
+- **No tracking** marks the run complete without starting a tracker.
+
+Pressing the hardware Back button returns from the tracker to run setup, then to the guided workout and plan. Outdoor sessions announce kilometre and halfway cues where appropriate.
+
+### 6. Finish and Log
+
+At the end of a session, choose Easy, Good, or Hard. TrainCue records the date, duration, completed steps, effort, run mode, and distance in **History**. Partially completed sessions can also be logged, while completed exercise progress remains saved locally.
+
+## Routine JSON
+
+TrainCue reads its plan from [`routines.json`](routines.json). The root can be either a JSON array or an object containing a `routines` array.
+
+A training day contains one or more blocks:
 
 ```json
 {
@@ -91,33 +83,70 @@ Full day example:
   "subtitle": "Run + strength",
   "items": [
     {
-      "id": "w1-thu-run",
+      "id": "w1-thursday-run",
       "type": "run",
-      "label": "2 mi run",
-      "distanceMiles": 2
+      "label": "Easy Run",
+      "distanceKm": 2.4,
+      "workouts": [
+        {
+          "name": "2.4 km run",
+          "sets": 1,
+          "reps": "2.4 km",
+          "distanceKm": 2.4,
+          "imageAsset": "run_walk"
+        },
+        {
+          "name": "5 min warm-up walk",
+          "sets": 1,
+          "reps": "5 min",
+          "imageAsset": "warmup_walk"
+        }
+      ]
     },
     {
-      "id": "w1-thu-strength",
+      "id": "w1-thursday-strength",
       "type": "strength",
       "label": "Upper body strength",
       "workouts": [
-        { "name": "Bench Press", "sets": 3, "reps": "10" }
+        {
+          "id": "bench-press",
+          "name": "Bench Press",
+          "sets": 3,
+          "reps": "10",
+          "imageAsset": "bench_press"
+        }
       ]
     }
   ]
 }
 ```
 
-## GitHub Routine Import
+Supported block types currently include `run`, `strength`, `cross-training`, `rest`, `recovery`, `hyrox`, and `mixed`. Unknown types still display and run as general workout blocks.
 
-The app can import routines from a public GitHub-hosted JSON file when you tap `Update` on the watch.
+Run distances may use `distanceKm` or `distanceMiles`. Exercise `imageAsset` values should match a drawable name in `app/src/main/res/drawable` or `drawable-nodpi`.
 
-1. Create `routines.json` in a public GitHub repository.
-2. Use the raw file URL, for example `https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main/routines.json`.
-3. Paste that URL into `ROUTINE_FEED_URL` near the top of `app/src/main/java/com/jongrady/galaxywatchsplits/MainActivity.kt`.
+## GitHub Plan Sync
 
-If GitHub can be reached, the watch replaces its saved plan with the latest JSON. If GitHub cannot be reached, it keeps the saved watch copy. Locally deleted days will come back the next time you manually update from GitHub.
+The watch keeps a local copy of the plan and works offline. Tap **Sync** on Home to download the latest `routines.json` from GitHub. A successful sync replaces the cached plan while preserving completed steps, completed days, history, and any compatible active-session data.
 
-## Open in Android Studio
+The feed URL is configured as `ROUTINE_FEED_URL` in [`TrainingRepository.kt`](app/src/main/java/com/jongrady/galaxywatchsplits/TrainingRepository.kt).
 
-Open this folder in Android Studio, let Gradle sync, then run the `app` configuration on a Wear OS emulator or paired Galaxy Watch.
+## Build and Test
+
+Open the repository in Android Studio and run the `app` configuration on a Wear OS emulator or paired Galaxy Watch. The command-line equivalents are:
+
+```powershell
+.\gradlew.bat :app:testDebugUnitTest :app:assembleDebug
+```
+
+The debug APK is generated at `app/build/outputs/apk/debug/app-debug.apk`.
+
+## Version History
+
+### v3.0.0
+
+Complete watch-first rewrite with guided sessions, resumable progress, run modes, logging, history, improved navigation, and the 168-day plan browser.
+
+### v2.x
+
+Introduced GitHub routine import, offline plan caching, per-exercise completion, exercise images, GPS run tracking, and treadmill/manual completion.
