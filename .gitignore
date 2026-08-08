@@ -15,6 +15,7 @@ local.properties
 *.apk
 *.aab
 *.ap_
+/build-review/
 
 # Signing files
 *.jks

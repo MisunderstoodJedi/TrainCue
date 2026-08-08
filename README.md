@@ -8,7 +8,18 @@ TrainCue combines the ideas from the other two watch apps:
 - **LiftCue** is for strength routines with exercise, sets, reps, and tap-to-complete rows.
 - **TrainCue** is the combined plan app: it can show a training day containing runs, strength work, rest, cross-training, or any other plan item.
 
-## Version 2
+## Version 3
+
+- Watch-first home screen with the next unfinished workout
+- Resumable guided sessions with per-set progress
+- Outdoor GPS, treadmill timer, and no-tracking run modes
+- Complete run instructions remain visible in each run block
+- Session history with duration, completion, effort, and run distance
+- Hardware Back navigation on every secondary screen
+- Offline progress and active-session persistence
+- Full 168-day plan browser with completion status
+
+## Earlier Version 2 Features
 
 - Manual GitHub update from `routines.json`
 - Local cached plan when GitHub is unavailable

@@ -1,139 +1,39 @@
 package com.jongrady.traincue
 
-import android.Manifest
-import android.app.Activity
-import android.content.Context
-import android.content.pm.PackageManager
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
-import android.media.AudioManager
-import android.media.ToneGenerator
 import android.os.Bundle
-import android.os.VibrationEffect
-import android.os.Vibrator
-import android.os.VibratorManager
-import android.speech.tts.TextToSpeech
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
-import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat
-import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
-import androidx.wear.compose.foundation.lazy.items
-import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
-import androidx.wear.compose.material.Button
-import androidx.wear.compose.material.ButtonDefaults
-import androidx.wear.compose.material.Chip
-import androidx.wear.compose.material.ChipDefaults
-import androidx.wear.compose.material.MaterialTheme
-import androidx.wear.compose.material.Text
-import androidx.wear.compose.material.TimeText
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.withContext
-import org.json.JSONArray
-import org.json.JSONException
-import org.json.JSONObject
-import java.io.IOException
-import java.net.HttpURLConnection
-import java.net.SocketTimeoutException
-import java.net.URL
-import java.net.UnknownHostException
-import java.util.Locale
-import kotlin.math.roundToInt
-
-private const val ROUTINE_FEED_URL = "https://raw.githubusercontent.com/MisunderstoodJedi/TrainCue/main/routines.json"
-private const val MILES_TO_KM = 1.609344
+import java.util.UUID
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            TrainCueApp()
-        }
+        setContent { TrainCueApp() }
     }
 }
 
-private data class TrainingDay(
-    val id: String,
-    val title: String,
-    val subtitle: String,
-    val items: List<PlanItem>,
-)
-
-private data class PlanItem(
-    val id: String,
-    val type: String,
-    val label: String,
-    val distanceKm: Double? = null,
-    val workouts: List<WorkoutItem> = emptyList(),
-)
-
-private data class WorkoutItem(
-    val id: String? = null,
-    val name: String,
-    val sets: Int,
-    val reps: String,
-    val note: String = "",
-    val imageAsset: String? = null,
-)
-
-private data class WorkoutSelection(
-    val item: PlanItem,
-    val workout: WorkoutItem,
-)
-
-private enum class Screen {
+private enum class AppScreen {
     Splash,
+    Home,
     Plan,
     Day,
-    RunOptions,
+    Session,
+    RunMode,
     RunTracker,
-    ExercisePreview,
+    ExerciseDetail,
+    Finish,
+    History,
 }
 
 @Composable
@@ -141,950 +41,305 @@ private fun TrainCueApp() {
     val context = LocalContext.current
     val repository = remember { TrainingRepository(context) }
     val cues = remember { TrainingCuePlayer(context) }
-    val days = remember { mutableStateListOf<TrainingDay>() }
-    val completedItems = remember { mutableStateMapOf<String, Boolean>() }
-    var screen by rememberSaveable { mutableStateOf(Screen.Splash) }
-    var activeDay by remember { mutableStateOf<TrainingDay?>(null) }
-    var activeRun by remember { mutableStateOf<PlanItem?>(null) }
-    var activeWorkoutSelection by remember { mutableStateOf<WorkoutSelection?>(null) }
-    var syncMessage by rememberSaveable { mutableStateOf("Local plan") }
-    var updateRequested by remember { mutableStateOf(false) }
-    var confirmDeleteDay by rememberSaveable { mutableStateOf(false) }
+    val screens = remember { mutableStateListOf(AppScreen.Splash) }
 
-    LaunchedEffect(Unit) {
-        delay(1600)
-        if (screen == Screen.Splash) screen = Screen.Plan
+    var days by remember { mutableStateOf(emptyList<TrainingDay>()) }
+    var completedSteps by remember { mutableStateOf(emptySet<String>()) }
+    var completedDays by remember { mutableStateOf(emptySet<String>()) }
+    var history by remember { mutableStateOf(emptyList<WorkoutLog>()) }
+    var activeSession by remember { mutableStateOf<ActiveSession?>(null) }
+    var selectedDayId by remember { mutableStateOf<String?>(null) }
+    var selectedExercise by remember { mutableStateOf<SessionStep.Exercise?>(null) }
+    var selectedRunMode by remember { mutableStateOf(RunMode.OUTDOOR) }
+    var syncRequested by remember { mutableStateOf(false) }
+    var syncMessage by remember { mutableStateOf("Plan saved offline") }
+
+    val screen = screens.last()
+    val selectedDay = days.firstOrNull { it.id == selectedDayId }
+    val sessionDay = days.firstOrNull { it.id == activeSession?.dayId }
+
+    fun push(target: AppScreen) {
+        if (screens.lastOrNull() != target) screens.add(target)
+    }
+
+    fun replace(target: AppScreen) {
+        if (screens.isNotEmpty()) screens.removeAt(screens.lastIndex)
+        screens.add(target)
+    }
+
+    fun goHome() {
+        screens.clear()
+        screens.add(AppScreen.Home)
+    }
+
+    fun goBack() {
+        if (screens.size > 1) screens.removeAt(screens.lastIndex)
+    }
+
+    fun saveSession(session: ActiveSession?) {
+        activeSession = session
+        repository.saveActiveSession(session)
+    }
+
+    fun saveCompleted(next: Set<String>) {
+        completedSteps = next
+        repository.saveCompletedSteps(next)
+    }
+
+    fun startSession(day: TrainingDay) {
+        selectedDayId = day.id
+        val existing = activeSession?.takeIf { it.dayId == day.id }
+        if (existing == null) {
+            val preCompleted = day.sessionSteps().associate { step ->
+                step.key to if (step.key in completedSteps) step.requiredSets() else 0
+            }.filterValues { it > 0 }
+            val firstOpen = day.sessionSteps().indexOfFirst { it.key !in completedSteps }.let { if (it < 0) 0 else it }
+            saveSession(
+                ActiveSession(
+                    dayId = day.id,
+                    startedAt = System.currentTimeMillis(),
+                    stepIndex = firstOpen,
+                    completedSets = preCompleted,
+                ),
+            )
+        }
+        push(AppScreen.Session)
+    }
+
+    fun finishCurrentStep(step: SessionStep) {
+        val session = activeSession ?: return
+        val day = sessionDay ?: return
+        val steps = day.sessionSteps()
+        val currentSets = session.completedSets[step.key] ?: 0
+        val nextSets = (currentSets + 1).coerceAtMost(step.requiredSets())
+        val updatedSets = session.completedSets + (step.key to nextSets)
+        if (nextSets >= step.requiredSets()) saveCompleted(completedSteps + step.key)
+        val nextIndex = if (nextSets >= step.requiredSets()) session.stepIndex + 1 else session.stepIndex
+        saveSession(session.copy(stepIndex = nextIndex.coerceAtMost(steps.size), completedSets = updatedSets))
+        if (nextIndex >= steps.size) replace(AppScreen.Finish)
+    }
+
+    fun completeRun(distanceKm: Double, seconds: Long, mode: RunMode) {
+        val session = activeSession ?: return
+        val day = sessionDay ?: return
+        val step = day.sessionSteps().getOrNull(session.stepIndex) ?: return
+        saveCompleted(completedSteps + step.key)
+        val nextIndex = session.stepIndex + 1
+        saveSession(
+            session.copy(
+                stepIndex = nextIndex,
+                completedSets = session.completedSets + (step.key to 1),
+                runMode = mode,
+                runDistanceKm = session.runDistanceKm + distanceKm,
+                runSeconds = session.runSeconds + seconds,
+            ),
+        )
+        cues.done("Run complete")
+        replace(if (nextIndex >= day.sessionSteps().size) AppScreen.Finish else AppScreen.Session)
+    }
+
+    fun logSession(effort: Int) {
+        val session = activeSession ?: return
+        val day = sessionDay ?: return
+        val steps = day.sessionSteps()
+        val doneCount = steps.count { it.key in completedSteps }
+        if (doneCount == steps.size && steps.isNotEmpty()) {
+            completedDays = completedDays + day.id
+            repository.saveCompletedDays(completedDays)
+        }
+        val now = System.currentTimeMillis()
+        repository.addHistory(
+            WorkoutLog(
+                id = UUID.randomUUID().toString(),
+                dayId = day.id,
+                title = day.title,
+                subtitle = day.subtitle,
+                completedAt = now,
+                durationSeconds = ((now - session.startedAt) / 1000).coerceAtLeast(1),
+                completedSteps = doneCount,
+                totalSteps = steps.size,
+                effort = effort,
+                runMode = session.runMode,
+                distanceKm = session.runDistanceKm,
+            ),
+        )
+        history = repository.loadHistory()
+        saveSession(null)
+        selectedDayId = null
+        goHome()
     }
 
     LaunchedEffect(Unit) {
-        days.clear()
-        days.addAll(repository.load())
-        completedItems.clear()
-        repository.loadCompleted().forEach { completedItems[it] = true }
-
+        days = repository.loadDays()
+        completedSteps = repository.loadCompletedSteps()
+        completedDays = repository.loadCompletedDays()
+        history = repository.loadHistory()
+        activeSession = repository.loadActiveSession()?.takeIf { saved -> days.any { it.id == saved.dayId } }
         if (days.isEmpty() && !repository.hasSavedPlan()) {
-            days.addAll(starterPlan())
-            repository.save(days)
+            days = starterPlan()
+            repository.saveDays(days)
         }
+        delay(850)
+        screens.clear()
+        screens.add(AppScreen.Home)
     }
 
-    LaunchedEffect(updateRequested) {
-        if (updateRequested && ROUTINE_FEED_URL.isNotBlank()) {
-            syncMessage = "Syncing..."
-            runCatching { RemotePlanImporter(ROUTINE_FEED_URL).load() }
-                .onSuccess { remoteDays ->
-                    val visibleRemoteDays = remoteDays.filterNot { it.id in repository.loadDeletedDayIds() }
-                    if (visibleRemoteDays.isNotEmpty()) {
-                        days.clear()
-                        days.addAll(visibleRemoteDays)
-                        repository.save(days)
-                        syncMessage = "Synced from GitHub"
-                    } else if (remoteDays.isNotEmpty()) {
-                        days.clear()
-                        repository.save(days)
-                        syncMessage = "Synced: all days done"
-                    } else {
-                        syncMessage = "GitHub file empty"
-                    }
+    LaunchedEffect(syncRequested) {
+        if (!syncRequested) return@LaunchedEffect
+        syncMessage = "Syncing plan..."
+        runCatching { RemotePlanImporter().load() }
+            .onSuccess { remoteDays ->
+                if (remoteDays.isNotEmpty()) {
+                    days = remoteDays
+                    repository.saveDays(remoteDays)
+                    syncMessage = "${remoteDays.size} days updated"
+                } else {
+                    syncMessage = "Plan is empty"
                 }
-                .onFailure { error ->
-                    syncMessage = error.syncMessage()
-                }
-            updateRequested = false
-        }
+            }
+            .onFailure { syncMessage = it.syncMessage() }
+        syncRequested = false
     }
 
     DisposableEffect(Unit) {
         onDispose { cues.release() }
     }
 
-    fun setCompleted(key: String, completed: Boolean) {
-        if (completed) completedItems[key] = true else completedItems.remove(key)
-        repository.saveCompleted(completedItems.keys)
-    }
+    BackHandler(enabled = screens.size > 1) { goBack() }
 
-    fun toggleCompleted(key: String) {
-        setCompleted(key, completedItems[key] != true)
-    }
-
-    fun goBack() {
+    TrainCueTheme {
         when (screen) {
-            Screen.Day -> {
-                confirmDeleteDay = false
-                screen = Screen.Plan
-            }
-            Screen.RunOptions -> screen = Screen.Day
-            Screen.RunTracker -> screen = Screen.RunOptions
-            Screen.ExercisePreview -> {
-                activeWorkoutSelection = null
-                screen = Screen.Day
-            }
-            Screen.Splash,
-            Screen.Plan -> Unit
-        }
-    }
-
-    BackHandler(enabled = screen != Screen.Splash && screen != Screen.Plan) {
-        goBack()
-    }
-
-    MaterialTheme {
-        AppBackdrop {
-            TimeText()
-            when (screen) {
-                Screen.Splash -> TrainCueSplash()
-                Screen.Plan -> PlanScreen(
-                    days = days,
-                    syncMessage = syncMessage,
-                    onSelect = {
-                        activeDay = it
-                        screen = Screen.Day
+            AppScreen.Splash -> SplashScreen()
+            AppScreen.Home -> HomeScreen(
+                nextDay = days.firstOrNull { !it.isComplete(completedSteps, completedDays) },
+                completedCount = days.count { it.isComplete(completedSteps, completedDays) },
+                totalCount = days.size,
+                activeSession = activeSession,
+                activeDay = days.firstOrNull { it.id == activeSession?.dayId },
+                syncMessage = syncMessage,
+                onStart = { day -> startSession(day) },
+                onResume = { day -> selectedDayId = day.id; push(AppScreen.Session) },
+                onCancelSession = { saveSession(null) },
+                onPlan = { push(AppScreen.Plan) },
+                onHistory = { push(AppScreen.History) },
+                onSync = { syncRequested = true },
+            )
+            AppScreen.Plan -> PlanScreen(
+                days = days,
+                completedSteps = completedSteps,
+                completedDays = completedDays,
+                onSelect = { day -> selectedDayId = day.id; push(AppScreen.Day) },
+                onBack = ::goBack,
+            )
+            AppScreen.Day -> selectedDay?.let { day ->
+                DayScreen(
+                    day = day,
+                    completedSteps = completedSteps,
+                    isCompleted = day.isComplete(completedSteps, completedDays),
+                    canResume = activeSession?.dayId == day.id,
+                    onStart = { startSession(day) },
+                    onExercise = { block, workout ->
+                        selectedExercise = SessionStep.Exercise(block, workout)
+                        push(AppScreen.ExerciseDetail)
                     },
-                    onUpdate = { updateRequested = true },
+                    onBack = ::goBack,
                 )
-                Screen.Day -> activeDay?.let { day ->
-                    DayScreen(
+            }
+            AppScreen.Session -> sessionDay?.let { day ->
+                val session = activeSession
+                val steps = day.sessionSteps()
+                val step = session?.let { steps.getOrNull(it.stepIndex) }
+                if (session != null && step != null) {
+                    SessionScreen(
                         day = day,
-                        completedItems = completedItems,
-                        onRun = {
-                            activeRun = it
-                            screen = Screen.RunOptions
+                        step = step,
+                        stepIndex = session.stepIndex,
+                        stepCount = steps.size,
+                        completedSets = session.completedSets[step.key] ?: 0,
+                        onComplete = { finishCurrentStep(step) },
+                        onRun = { push(AppScreen.RunMode) },
+                        onDetails = { exercise -> selectedExercise = exercise; push(AppScreen.ExerciseDetail) },
+                        onPrevious = {
+                            saveSession(session.copy(stepIndex = (session.stepIndex - 1).coerceAtLeast(0)))
                         },
-                        onToggleItem = { item -> toggleCompleted(item.completionKey()) },
-                        onToggleWorkout = { item, workout ->
-                            if (workout.imageAsset.isNullOrBlank()) {
-                                val keys = item.workoutCompletionKeys(workout)
-                                if (completedItems.isWorkoutCompleted(item, workout)) {
-                                    keys.forEach { setCompleted(it, false) }
-                                } else {
-                                    setCompleted(keys.first(), true)
-                                }
-                            } else {
-                                activeWorkoutSelection = WorkoutSelection(item, workout)
-                                screen = Screen.ExercisePreview
-                            }
+                        onSkip = {
+                            val nextIndex = session.stepIndex + 1
+                            saveSession(session.copy(stepIndex = nextIndex))
+                            if (nextIndex >= steps.size) replace(AppScreen.Finish)
                         },
-                        confirmDelete = confirmDeleteDay,
-                        onDeleteRequest = { confirmDeleteDay = true },
-                        onDeleteCancel = { confirmDeleteDay = false },
-                        onDeleteConfirm = {
-                            days.remove(day)
-                            repository.addDeletedDayId(day.id)
-                            repository.save(days)
-                            activeDay = null
-                            confirmDeleteDay = false
-                            screen = Screen.Plan
-                        },
-                        onBack = {
-                            goBack()
-                        },
+                        onExit = ::goBack,
                     )
-                }
-                Screen.RunOptions -> activeRun?.let { run ->
-                    RunOptionsScreen(
-                        run = run,
-                        onStart = { screen = Screen.RunTracker },
-                        onManualDone = {
-                            setCompleted(run.completionKey(), true)
-                            screen = Screen.Day
-                        },
-                        onBack = { goBack() },
-                    )
-                }
-                Screen.RunTracker -> activeRun?.let { run ->
-                    RunTrackerScreen(
-                        run = run,
-                        cues = cues,
-                        onComplete = {
-                            setCompleted(run.completionKey(), true)
-                            screen = Screen.Day
-                        },
-                        onBack = { goBack() },
-                    )
-                }
-                Screen.ExercisePreview -> activeWorkoutSelection?.let { selection ->
-                    ExercisePreviewScreen(
-                        workout = selection.workout,
-                        isCompleted = completedItems.isWorkoutCompleted(selection.item, selection.workout),
-                        onToggleCompleted = {
-                            val keys = selection.item.workoutCompletionKeys(selection.workout)
-                            if (completedItems.isWorkoutCompleted(selection.item, selection.workout)) {
-                                keys.forEach { setCompleted(it, false) }
-                            } else {
-                                setCompleted(keys.first(), true)
-                            }
-                            activeWorkoutSelection = null
-                            screen = Screen.Day
-                        },
-                        onClose = {
-                            activeWorkoutSelection = null
-                            goBack()
-                        },
+                } else if (session != null) {
+                    FinishScreen(
+                        completed = steps.count { it.key in completedSteps },
+                        total = steps.size,
+                        onRate = ::logSession,
+                        onBack = ::goBack,
                     )
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun AppBackdrop(content: @Composable () -> Unit) {
-    Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = R.drawable.traincue_training),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize().alpha(0.86f),
-        )
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    Brush.verticalGradient(
-                        colors = listOf(Color(0x55050607), Color(0xCC050607), Color(0xFA050607)),
-                    ),
-                ),
-        )
-        Box(modifier = Modifier.fillMaxSize()) { content() }
-    }
-}
-
-@Composable
-private fun TrainCueSplash() {
-    val versionName = stringResource(id = R.string.app_version)
-    CenterColumn {
-        TrainMark()
-        Spacer(Modifier.height(8.dp))
-        Text("TrainCue", fontSize = 25.sp, fontWeight = FontWeight.Bold)
-        Text("Run. Lift. Complete.", fontSize = 12.sp, color = Color(0xFFCFD8DC))
-        Spacer(Modifier.height(6.dp))
-        Text("v$versionName", fontSize = 10.sp, color = Color(0xFF90A4AE))
-    }
-}
-
-@Composable
-private fun PlanScreen(
-    days: List<TrainingDay>,
-    syncMessage: String,
-    onSelect: (TrainingDay) -> Unit,
-    onUpdate: () -> Unit,
-) {
-    val listState = rememberScalingLazyListState()
-    ScalingLazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        state = listState,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        contentPadding = PaddingValues(top = 34.dp, bottom = 28.dp),
-    ) {
-        item { TrainMark() }
-        item { Text("TrainCue", fontSize = 22.sp, fontWeight = FontWeight.Bold) }
-        item { Text(syncMessage, fontSize = 11.sp, color = Color(0xFFB0BEC5)) }
-        items(days, key = { it.id }) { day ->
-            Chip(
-                modifier = Modifier.fillMaxWidth(0.88f),
-                onClick = { onSelect(day) },
-                label = { Text(day.title, maxLines = 1, overflow = TextOverflow.Ellipsis) },
-                secondaryLabel = { Text("${day.subtitle}  ${day.items.size} items") },
-                colors = ChipDefaults.primaryChipColors(),
-            )
-        }
-        item {
-            Chip(
-                modifier = Modifier.fillMaxWidth(0.68f),
-                onClick = onUpdate,
-                label = { Text("Update") },
-                colors = ChipDefaults.secondaryChipColors(),
-            )
-        }
-    }
-}
-
-@Composable
-private fun DayScreen(
-    day: TrainingDay,
-    completedItems: Map<String, Boolean>,
-    onRun: (PlanItem) -> Unit,
-    onToggleItem: (PlanItem) -> Unit,
-    onToggleWorkout: (PlanItem, WorkoutItem) -> Unit,
-    confirmDelete: Boolean,
-    onDeleteRequest: () -> Unit,
-    onDeleteCancel: () -> Unit,
-    onDeleteConfirm: () -> Unit,
-    onBack: () -> Unit,
-) {
-    val listState = rememberScalingLazyListState()
-    ScalingLazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        state = listState,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        contentPadding = PaddingValues(top = 34.dp, bottom = 30.dp),
-    ) {
-        item { Text(day.title, fontSize = 20.sp, fontWeight = FontWeight.Bold) }
-        item { Text(day.subtitle, fontSize = 12.sp, color = Color(0xFFCFD8DC)) }
-        day.items.forEach { item ->
-            val type = item.type.lowercase()
-            val itemCompleted = when {
-                type == "strength" && item.workouts.isNotEmpty() -> item.workouts.all { workout ->
-                    completedItems.isWorkoutCompleted(item, workout)
-                }
-                else -> completedItems[item.completionKey()] == true
-            }
-            item {
-                PlanItemRow(
-                    item = item,
-                    isCompleted = itemCompleted,
-                    onClick = {
-                        when (type) {
-                            "run" -> onRun(item)
-                            "strength" -> Unit
-                            else -> onToggleItem(item)
+            AppScreen.RunMode -> sessionDay?.sessionSteps()?.getOrNull(activeSession?.stepIndex ?: -1)?.let { step ->
+                RunModeScreen(
+                    block = step.block,
+                    onSelect = { mode ->
+                        selectedRunMode = mode
+                        if (mode == RunMode.MANUAL) {
+                            completeRun(step.block.distanceKm ?: 0.0, 0, mode)
+                        } else {
+                            push(AppScreen.RunTracker)
                         }
                     },
+                    onBack = ::goBack,
                 )
             }
-            if (item.workouts.isNotEmpty()) {
-                items(item.workouts) { workout ->
-                    WorkoutRow(
-                        workout = workout,
-                        isCompleted = completedItems.isWorkoutCompleted(item, workout),
-                        onToggle = { onToggleWorkout(item, workout) },
-                    )
-                }
-            }
-        }
-        item {
-            if (confirmDelete) {
-                Text("Delete day?", fontSize = 13.sp, color = Color(0xFFFFCC80))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Button(
-                        modifier = Modifier.size(52.dp),
-                        onClick = onDeleteCancel,
-                        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF37474F)),
-                    ) {
-                        Text("No", fontSize = 13.sp)
-                    }
-                    Button(
-                        modifier = Modifier.size(52.dp),
-                        onClick = onDeleteConfirm,
-                        colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF5D2C2C)),
-                    ) {
-                        Text("Yes", fontSize = 12.sp)
-                    }
-                }
-            } else {
-                Chip(
-                    modifier = Modifier.fillMaxWidth(0.68f),
-                    onClick = onDeleteRequest,
-                    label = { Text("Delete day") },
-                    colors = ChipDefaults.secondaryChipColors(),
+            AppScreen.RunTracker -> sessionDay?.sessionSteps()?.getOrNull(activeSession?.stepIndex ?: -1)?.let { step ->
+                RunTrackerScreen(
+                    block = step.block,
+                    mode = selectedRunMode,
+                    cues = cues,
+                    onComplete = { distance, seconds -> completeRun(distance, seconds, selectedRunMode) },
+                    onBack = ::goBack,
                 )
             }
-        }
-        item {
-            Chip(
-                modifier = Modifier.fillMaxWidth(0.62f),
-                onClick = onBack,
-                label = { Text("Plan") },
-                colors = ChipDefaults.secondaryChipColors(),
-            )
-        }
-    }
-}
-
-@Composable
-private fun PlanItemRow(item: PlanItem, isCompleted: Boolean, onClick: () -> Unit) {
-    val backgroundColor = if (isCompleted) Color(0xCC123D2F) else Color(0xB0101820)
-    val borderColor = if (isCompleted) Color(0xCC1DE9B6) else Color(0x441DE9B6)
-    val typeText = item.type.lowercase().replaceFirstChar { it.uppercase() }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth(0.9f)
-            .clip(RoundedCornerShape(18.dp))
-            .background(backgroundColor, RoundedCornerShape(18.dp))
-            .border(1.dp, borderColor, RoundedCornerShape(18.dp))
-            .clickable(onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween,
-    ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(item.label, fontSize = 14.sp, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Text(typeText, fontSize = 10.sp, color = Color(0xFFB0BEC5))
-        }
-        Text(
-            if (isCompleted) "Done" else item.distanceKm?.let { "${formatDistanceKm(it)}" } ?: "",
-            textAlign = TextAlign.End,
-            fontSize = 12.sp,
-            color = Color(0xFF1DE9B6),
-            fontWeight = FontWeight.Bold,
-        )
-    }
-}
-
-@Composable
-private fun WorkoutRow(workout: WorkoutItem, isCompleted: Boolean, onToggle: () -> Unit) {
-    val backgroundColor = if (isCompleted) Color(0xCC123D2F) else Color(0x88101820)
-    val repsColor = if (isCompleted) Color(0xFFA5D6A7) else Color(0xFFCFD8DC)
-    val statusText = when {
-        isCompleted -> "Done"
-        !workout.imageAsset.isNullOrBlank() -> "Preview"
-        else -> "${workout.sets} x ${workout.reps}"
-    }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth(0.84f)
-            .clip(RoundedCornerShape(14.dp))
-            .background(backgroundColor, RoundedCornerShape(14.dp))
-            .clickable(onClick = onToggle)
-            .padding(horizontal = 10.dp, vertical = 6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween,
-    ) {
-        Text(workout.name, modifier = Modifier.weight(1f), fontSize = 12.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        Text(statusText, fontSize = 12.sp, color = repsColor, maxLines = 1)
-    }
-}
-
-@Composable
-private fun ExercisePreviewScreen(
-    workout: WorkoutItem,
-    isCompleted: Boolean,
-    onToggleCompleted: () -> Unit,
-    onClose: () -> Unit,
-) {
-    val context = LocalContext.current
-    val imageResId = remember(workout.imageAsset) {
-        resolveDrawableResId(context, workout.imageAsset)
-    }
-    var imageExpanded by remember { mutableStateOf(false) }
-
-    BackHandler(enabled = imageExpanded) {
-        imageExpanded = false
-    }
-
-    if (imageExpanded) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Black)
-                .clickable { imageExpanded = false }
-                .padding(10.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            if (imageResId != null) {
-                Image(
-                    painter = painterResource(id = imageResId),
-                    contentDescription = workout.name,
-                    contentScale = ContentScale.Fit,
-                    modifier = Modifier.fillMaxSize(),
+            AppScreen.ExerciseDetail -> selectedExercise?.let { exercise ->
+                ExerciseDetailScreen(exercise = exercise, onBack = ::goBack)
+            }
+            AppScreen.Finish -> sessionDay?.let { day ->
+                val steps = day.sessionSteps()
+                FinishScreen(
+                    completed = steps.count { it.key in completedSteps },
+                    total = steps.size,
+                    onRate = ::logSession,
+                    onBack = ::goBack,
                 )
-            } else {
-                Text("No image", fontSize = 12.sp, color = Color(0xFFFFCC80))
             }
-        }
-        return
-    }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(start = 18.dp, top = 28.dp, end = 18.dp, bottom = 8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Top,
-    ) {
-        Text(
-            workout.name,
-            modifier = Modifier.fillMaxWidth(0.92f),
-            fontSize = 14.sp,
-            fontWeight = FontWeight.Bold,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center,
-        )
-        Text("${workout.sets} x ${workout.reps}", fontSize = 11.sp, color = Color(0xFFCFD8DC))
-        if (workout.note.isNotBlank()) {
-            Text(
-                workout.note,
-                modifier = Modifier.fillMaxWidth(0.9f),
-                fontSize = 10.sp,
-                lineHeight = 12.sp,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-                color = Color(0xFFB0BEC5),
-                textAlign = TextAlign.Center,
-            )
-        }
-        Spacer(Modifier.height(4.dp))
-        Box(
-            modifier = Modifier
-                .size(94.dp)
-                .clip(RoundedCornerShape(14.dp))
-                .background(Color(0xEE101820), RoundedCornerShape(14.dp))
-                .border(1.dp, Color(0x661DE9B6), RoundedCornerShape(14.dp))
-                .clickable(enabled = imageResId != null) { imageExpanded = true }
-                .padding(6.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            if (imageResId != null) {
-                Image(
-                    painter = painterResource(id = imageResId),
-                    contentDescription = workout.name,
-                    contentScale = ContentScale.Fit,
-                    modifier = Modifier.fillMaxSize(),
-                )
-            } else {
-                Text("No image", fontSize = 12.sp, color = Color(0xFFFFCC80))
-            }
-        }
-        Spacer(Modifier.height(8.dp))
-        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            Button(
-                modifier = Modifier.size(48.dp),
-                onClick = onToggleCompleted,
-                colors = ButtonDefaults.buttonColors(
-                    backgroundColor = if (isCompleted) Color(0xFF546E7A) else Color(0xFF1B5E48),
-                ),
-            ) {
-                Text(if (isCompleted) "Undo" else "Done", fontSize = 10.sp, textAlign = TextAlign.Center)
-            }
-            Button(
-                modifier = Modifier.size(48.dp),
-                onClick = onClose,
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF37474F)),
-            ) {
-                Text("Back", fontSize = 10.sp)
-            }
+            AppScreen.History -> HistoryScreen(history = history, onBack = ::goBack)
         }
     }
 }
 
-@Composable
-private fun RunOptionsScreen(run: PlanItem, onStart: () -> Unit, onManualDone: () -> Unit, onBack: () -> Unit) {
-    CenterColumn {
-        TrainMark()
-        Spacer(Modifier.height(8.dp))
-        Text(run.label, fontSize = 20.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-        Text(run.distanceKm?.let { formatDistanceKm(it) } ?: "Manual run", fontSize = 13.sp, color = Color(0xFFCFD8DC))
-        Spacer(Modifier.height(10.dp))
-        Chip(onClick = onStart, label = { Text("Track outside") }, colors = ChipDefaults.primaryChipColors())
-        Chip(onClick = onManualDone, label = { Text("Treadmill done") }, colors = ChipDefaults.secondaryChipColors())
-        Chip(modifier = Modifier.fillMaxWidth(0.62f), onClick = onBack, label = { Text("Back") }, colors = ChipDefaults.secondaryChipColors())
-    }
+private fun SessionStep.requiredSets(): Int = when (this) {
+    is SessionStep.Exercise -> workout.sets
+    is SessionStep.Run,
+    is SessionStep.Simple -> 1
 }
 
-@Composable
-private fun RunTrackerScreen(run: PlanItem, cues: TrainingCuePlayer, onComplete: () -> Unit, onBack: () -> Unit) {
-    val context = LocalContext.current
-    val targetKm = run.distanceKm ?: 0.0
-    var hasPermission by remember {
-        mutableStateOf(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
-    }
-    var distanceMeters by remember { mutableStateOf(0.0) }
-    var lastLocation by remember { mutableStateOf<Location?>(null) }
-    var isTracking by remember { mutableStateOf(false) }
-    var elapsedSeconds by remember { mutableStateOf(0L) }
-    var currentAccuracy by remember { mutableStateOf<Float?>(null) }
-    var lastAnnouncedKm by remember { mutableStateOf(0) }
-    var halfwayAnnounced by remember { mutableStateOf(false) }
-    var completed by remember { mutableStateOf(false) }
-
-    val permissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-        hasPermission = granted
-        if (granted) isTracking = true
-    }
-
-    DisposableEffect(hasPermission, isTracking) {
-        if (!hasPermission || !isTracking) return@DisposableEffect onDispose { }
-        val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        val listener = LocationListener { location ->
-            currentAccuracy = location.accuracy
-            val previous = lastLocation
-            if (previous != null && location.accuracy <= 80f) {
-                val delta = previous.distanceTo(location).toDouble()
-                if (delta in 0.0..250.0) distanceMeters += delta
-            }
-            lastLocation = location
-        }
-        runCatching {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000L, 2f, listener)
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000L, 5f, listener)
-        }
-        onDispose { locationManager.removeUpdates(listener) }
-    }
-
-    LaunchedEffect(isTracking) {
-        if (isTracking) cues.speak("Run started")
-    }
-
-    LaunchedEffect(isTracking) {
-        while (isTracking) {
-            delay(1000)
-            elapsedSeconds += 1
-        }
-    }
-
-    LaunchedEffect(distanceMeters, completed) {
-        if (!completed && targetKm > 0.0) {
-            val currentKm = (distanceMeters / 1000.0).toInt()
-            if (currentKm > lastAnnouncedKm) {
-                lastAnnouncedKm = currentKm
-                cues.mark("${currentKm} kilometre")
-            }
-            if (!halfwayAnnounced && targetKm < 2.0 && distanceMeters >= targetKm * 500.0) {
-                halfwayAnnounced = true
-                cues.mark("Halfway")
-            }
-            if (distanceMeters >= targetKm * 1000.0) {
-                completed = true
-                isTracking = false
-                cues.done("Run complete")
-                onComplete()
-            }
-        }
-    }
-
-    CenterColumn {
-        Text("Outdoor run", fontSize = 18.sp, fontWeight = FontWeight.Bold)
-        Text(run.label, fontSize = 12.sp, color = Color(0xFFCFD8DC), textAlign = TextAlign.Center)
-        Spacer(Modifier.height(6.dp))
-        Text("${formatDistanceKm(distanceMeters / 1000.0)}", fontSize = 34.sp, fontWeight = FontWeight.Bold)
-        Text("Target ${formatDistanceKm(targetKm)}", fontSize = 12.sp, color = Color(0xFFB0BEC5))
-        Text(
-            "${formatElapsed(elapsedSeconds)}  ${formatAveragePace(elapsedSeconds, distanceMeters)}",
-            fontSize = 11.sp,
-            color = Color(0xFFCFD8DC),
-        )
-        Text(
-            runStatusText(hasPermission, isTracking, currentAccuracy),
-            fontSize = 10.sp,
-            color = Color(0xFF90A4AE),
-        )
-        Spacer(Modifier.height(10.dp))
-        if (!hasPermission) {
-            Chip(onClick = { permissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION) }, label = { Text("Allow GPS") })
-        } else {
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(modifier = Modifier.size(54.dp), onClick = { isTracking = !isTracking }) {
-                    Text(if (isTracking) "Pause" else "Start", fontSize = 11.sp)
-                }
-                Button(
-                    modifier = Modifier.size(54.dp),
-                    onClick = {
-                        cues.done("Run complete")
-                        onComplete()
-                    },
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF2E4E3D)),
-                ) {
-                    Text("Done", fontSize = 12.sp)
-                }
-            }
-        }
-        Chip(modifier = Modifier.fillMaxWidth(0.58f), onClick = onBack, label = { Text("Back") }, colors = ChipDefaults.secondaryChipColors())
-    }
-}
-
-@Composable
-private fun TrainMark() {
-    Box(
-        modifier = Modifier
-            .size(58.dp)
-            .clip(RoundedCornerShape(29.dp))
-            .border(1.dp, Color(0x881DE9B6), RoundedCornerShape(29.dp)),
-        contentAlignment = Alignment.Center,
-    ) {
-        Image(painter = painterResource(id = R.drawable.traincue_training), contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
-        Box(modifier = Modifier.fillMaxSize().background(Color(0x66050607)))
-        Text("TC", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color(0xFF1DE9B6))
-    }
-}
-
-@Composable
-private fun CenterColumn(content: @Composable ColumnScope.() -> Unit) {
-    Column(
-        modifier = Modifier.fillMaxSize().padding(horizontal = 18.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-        content = content,
-    )
-}
-
-private fun starterPlan(): List<TrainingDay> {
-    return listOf(
-        TrainingDay("week1-tuesday", "Week 1 Tuesday", "Easy run", listOf(PlanItem("w1-tue-run", "run", "2 mi run", distanceKm = 2 * MILES_TO_KM))),
-        TrainingDay(
-            "week1-thursday",
-            "Week 1 Thursday",
-            "Run + strength",
-            listOf(
-                PlanItem("w1-thu-run", "run", "2 mi run", distanceKm = 2 * MILES_TO_KM),
-                PlanItem(
-                    "w1-thu-strength",
-                    "strength",
-                    "Upper body strength",
-                    workouts = listOf(
-                        WorkoutItem(id = "bench-press", name = "Bench Press", sets = 3, reps = "10", imageAsset = "bench_press"),
-                        WorkoutItem(id = "shoulder-press", name = "Shoulder Press", sets = 3, reps = "8-10", imageAsset = "shoulder_press"),
-                    ),
+private fun starterPlan(): List<TrainingDay> = listOf(
+    TrainingDay(
+        id = "starter-day",
+        title = "Starter Monday",
+        subtitle = "Full body foundation",
+        items = listOf(
+            PlanItem(
+                id = "starter-strength",
+                type = "strength",
+                label = "Foundation",
+                workouts = listOf(
+                    WorkoutItem(name = "Goblet squat", sets = 3, reps = "10", imageAsset = "goblet_squat"),
+                    WorkoutItem(name = "Floor press", sets = 3, reps = "10", imageAsset = "kb_floor_press"),
+                    WorkoutItem(name = "Easy mobility", sets = 1, reps = "5 min", imageAsset = "mobility"),
                 ),
             ),
         ),
-    )
-}
-
-private class RemotePlanImporter(private val feedUrl: String) {
-    suspend fun load(): List<TrainingDay> = withContext(Dispatchers.IO) {
-        val raw = try {
-            val connection = URL(feedUrl.withCacheBuster()).openConnection() as HttpURLConnection
-            connection.run {
-                connectTimeout = 8000
-                readTimeout = 8000
-                useCaches = false
-                requestMethod = "GET"
-                val status = responseCode
-                if (status !in 200..299) throw PlanSyncException("GitHub HTTP $status")
-                inputStream.bufferedReader().use { it.readText() }
-            }
-        } catch (error: SocketTimeoutException) {
-            throw PlanSyncException("GitHub timeout", error)
-        } catch (error: UnknownHostException) {
-            throw PlanSyncException("No internet", error)
-        } catch (error: IOException) {
-            throw PlanSyncException("Network error", error)
-        }
-        if (raw.isBlank()) throw PlanSyncException("GitHub file empty")
-        try {
-            parseDays(raw)
-        } catch (error: JSONException) {
-            throw PlanSyncException("Invalid plan JSON", error)
-        }
-    }
-
-    private fun String.withCacheBuster(): String {
-        val separator = if (contains("?")) "&" else "?"
-        return "${this}${separator}updated=${System.currentTimeMillis()}"
-    }
-}
-
-private class PlanSyncException(message: String, cause: Throwable? = null) : Exception(message, cause)
-
-private fun Throwable.syncMessage(): String {
-    return when (this) {
-        is PlanSyncException -> message ?: "GitHub sync failed"
-        is JSONException -> "Invalid plan JSON"
-        is SocketTimeoutException -> "GitHub timeout"
-        is UnknownHostException -> "No internet"
-        is IOException -> "Network error"
-        else -> "GitHub sync failed"
-    }
-}
-
-private class TrainingRepository(context: Context) {
-    private val prefs = context.getSharedPreferences("train_plan", Context.MODE_PRIVATE)
-
-    fun load(): List<TrainingDay> {
-        val raw = prefs.getString("items", null) ?: return emptyList()
-        return parseDays(raw)
-    }
-
-    fun hasSavedPlan(): Boolean {
-        return prefs.contains("items")
-    }
-
-    fun save(days: List<TrainingDay>) {
-        prefs.edit().putString("items", days.toJsonArray().toString()).apply()
-    }
-
-    fun loadCompleted(): Set<String> {
-        return prefs.getStringSet("completed", emptySet()).orEmpty()
-    }
-
-    fun saveCompleted(completed: Set<String>) {
-        prefs.edit().putStringSet("completed", completed.toSet()).apply()
-    }
-
-    fun loadDeletedDayIds(): Set<String> {
-        return prefs.getStringSet("deleted_day_ids", emptySet()).orEmpty()
-    }
-
-    fun addDeletedDayId(dayId: String) {
-        prefs.edit().putStringSet("deleted_day_ids", loadDeletedDayIds() + dayId).apply()
-    }
-}
-
-private class TrainingCuePlayer(context: Context) {
-    private val appContext = context.applicationContext
-    private val tone = ToneGenerator(AudioManager.STREAM_MUSIC, 80)
-    private var ttsReady = false
-    private val tts = TextToSpeech(appContext) { status -> ttsReady = status == TextToSpeech.SUCCESS }
-
-    init {
-        tts.language = Locale.getDefault()
-        tts.setSpeechRate(1.0f)
-    }
-
-    fun mark(spokenText: String) {
-        vibrate(longArrayOf(0, 130, 70, 130))
-        tone.startTone(ToneGenerator.TONE_PROP_BEEP, 140)
-        speak(spokenText)
-    }
-
-    fun done(spokenText: String) {
-        vibrate(longArrayOf(0, 220, 80, 220, 80, 320))
-        tone.startTone(ToneGenerator.TONE_PROP_ACK, 350)
-        speak(spokenText)
-    }
-
-    fun speak(text: String) {
-        if (ttsReady) tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "traincue-${System.currentTimeMillis()}")
-    }
-
-    fun release() {
-        tone.release()
-        tts.stop()
-        tts.shutdown()
-    }
-
-    private fun vibrate(pattern: LongArray) {
-        val vibrator = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
-            val manager = appContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
-            manager.defaultVibrator
-        } else {
-            @Suppress("DEPRECATION")
-            appContext.getSystemService(Activity.VIBRATOR_SERVICE) as Vibrator
-        }
-        vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1))
-    }
-}
-
-private fun PlanItem.completionKey(): String = id
-
-private fun PlanItem.workoutCompletionKey(workout: WorkoutItem): String {
-    return workout.id?.takeIf { it.isNotBlank() }?.let { "${id}:${it}" } ?: legacyWorkoutCompletionKey(workout)
-}
-
-private fun PlanItem.workoutCompletionKeys(workout: WorkoutItem): List<String> {
-    return listOf(workoutCompletionKey(workout), legacyWorkoutCompletionKey(workout)).distinct()
-}
-
-private fun Map<String, Boolean>.isWorkoutCompleted(item: PlanItem, workout: WorkoutItem): Boolean {
-    return item.workoutCompletionKeys(workout).any { this[it] == true }
-}
-
-private fun PlanItem.legacyWorkoutCompletionKey(workout: WorkoutItem): String {
-    return "${id}:${workout.name.trim().uppercase()}"
-}
-
-private fun parseDays(raw: String): List<TrainingDay> {
-    val trimmed = raw.trim()
-    val array = if (trimmed.startsWith("[")) JSONArray(trimmed) else JSONObject(trimmed).getJSONArray("routines")
-    return List(array.length()) { index -> array.getJSONObject(index).toTrainingDay() }
-}
-
-private fun JSONObject.toTrainingDay(): TrainingDay {
-    val itemsArray = getJSONArray("items")
-    return TrainingDay(
-        id = getString("id"),
-        title = getString("title"),
-        subtitle = optString("subtitle", ""),
-        items = List(itemsArray.length()) { index -> itemsArray.getJSONObject(index).toPlanItem() },
-    )
-}
-
-private fun JSONObject.toPlanItem(): PlanItem {
-    val distanceKm = when {
-        has("distanceKm") -> getDouble("distanceKm")
-        has("distanceMiles") -> getDouble("distanceMiles") * MILES_TO_KM
-        else -> null
-    }
-    val workoutsArray = optJSONArray("workouts")
-    return PlanItem(
-        id = getString("id"),
-        type = getString("type"),
-        label = getString("label"),
-        distanceKm = distanceKm,
-        workouts = if (workoutsArray == null) emptyList() else List(workoutsArray.length()) { index -> workoutsArray.getJSONObject(index).toWorkoutItem() },
-    )
-}
-
-private fun JSONObject.toWorkoutItem(): WorkoutItem {
-    return WorkoutItem(
-        id = optString("id").takeIf { it.isNotBlank() },
-        name = getString("name"),
-        sets = getInt("sets").coerceAtLeast(1),
-        reps = get("reps").toString(),
-        note = optString("note", ""),
-        imageAsset = optString("imageAsset").takeIf { it.isNotBlank() },
-    )
-}
-
-private fun List<TrainingDay>.toJsonArray(): JSONArray {
-    val array = JSONArray()
-    forEach { day -> array.put(day.toJson()) }
-    return array
-}
-
-private fun TrainingDay.toJson(): JSONObject {
-    return JSONObject()
-        .put("id", id)
-        .put("title", title)
-        .put("subtitle", subtitle)
-        .put("items", JSONArray().also { array -> items.forEach { array.put(it.toJson()) } })
-}
-
-private fun PlanItem.toJson(): JSONObject {
-    return JSONObject()
-        .put("id", id)
-        .put("type", type)
-        .put("label", label)
-        .also { json ->
-            distanceKm?.let { json.put("distanceKm", it) }
-            if (workouts.isNotEmpty()) json.put("workouts", JSONArray().also { array -> workouts.forEach { array.put(it.toJson()) } })
-        }
-}
-
-private fun WorkoutItem.toJson(): JSONObject {
-    return JSONObject()
-        .also { json -> id?.takeIf { it.isNotBlank() }?.let { json.put("id", it) } }
-        .put("name", name)
-        .put("sets", sets)
-        .put("reps", reps)
-        .put("note", note)
-        .also { json -> imageAsset?.takeIf { it.isNotBlank() }?.let { json.put("imageAsset", it) } }
-}
-
-private fun formatDistanceKm(km: Double): String {
-    return if (km < 10) "${((km * 10).roundToInt() / 10.0)} km" else "${km.roundToInt()} km"
-}
-
-private fun formatElapsed(seconds: Long): String {
-    val minutes = seconds / 60
-    val remainingSeconds = seconds % 60
-    return "${minutes}:${remainingSeconds.toString().padStart(2, '0')}"
-}
-
-private fun formatAveragePace(seconds: Long, distanceMeters: Double): String {
-    if (seconds <= 0 || distanceMeters < 50.0) return "--:--/km"
-    val paceSeconds = (seconds / (distanceMeters / 1000.0)).roundToInt().coerceAtLeast(1)
-    return "${paceSeconds / 60}:${(paceSeconds % 60).toString().padStart(2, '0')}/km"
-}
-
-private fun runStatusText(hasPermission: Boolean, isTracking: Boolean, accuracy: Float?): String {
-    if (!hasPermission) return "GPS permission needed"
-    if (!isTracking) return "Paused"
-    return accuracy?.let { "GPS +/- ${it.roundToInt()} m" } ?: "Finding GPS"
-}
-
-private fun resolveDrawableResId(context: Context, assetName: String?): Int? {
-    val cleaned = assetName?.trim().orEmpty()
-    if (cleaned.isBlank()) return null
-    val resId = context.resources.getIdentifier(cleaned, "drawable", context.packageName)
-    return resId.takeIf { it != 0 }
-}
-
-private fun String?.prettyAssetLabel(): String {
-    val cleaned = this?.trim().orEmpty()
-    if (cleaned.isBlank()) return "Drawable asset"
-    return cleaned.replace('_', ' ').split(Regex("\\s+")).joinToString(" ") { part ->
-        part.lowercase().replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
-    }
-}
+    ),
+)
