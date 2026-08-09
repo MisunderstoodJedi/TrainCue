@@ -17,27 +17,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -83,27 +83,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -180,18 +180,48 @@
   {
     "id": "week1-sunday",
     "title": "Week 1 Sunday",
-    "subtitle": "Walk + Mobility",
+    "subtitle": "Walk + Strength C",
     "items": [
       {
-        "id": "w1-sunday-recovery",
-        "type": "recovery",
-        "label": "Walk + Mobility",
+        "id": "w1-sunday-cross-training",
+        "type": "cross-training",
+        "label": "Walk + Strength C",
         "workouts": [
           {
             "name": "5K plan: 30 min walk",
             "sets": 1,
             "reps": "5 km",
             "distanceKm": 5
+          },
+          {
+            "name": "Bike or row easy warm-up: 5-8 min",
+            "sets": 1,
+            "reps": "5-8 min"
+          },
+          {
+            "name": "Weighted-vest step-up or split squat",
+            "sets": 3,
+            "reps": "8/leg"
+          },
+          {
+            "name": "Dumbbell row",
+            "sets": 3,
+            "reps": "10-12/side"
+          },
+          {
+            "name": "Water-bag bear hug carry",
+            "sets": 3,
+            "reps": "30-40 m"
+          },
+          {
+            "name": "Powerball or grip donut: 3 short rounds",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Mobility: calves, hips, hamstrings and upper back",
+            "sets": 1,
+            "reps": "complete"
           }
         ]
       }
@@ -215,27 +245,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -281,27 +311,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -378,18 +408,48 @@
   {
     "id": "week2-sunday",
     "title": "Week 2 Sunday",
-    "subtitle": "Walk + Mobility",
+    "subtitle": "Walk + Strength C",
     "items": [
       {
-        "id": "w2-sunday-recovery",
-        "type": "recovery",
-        "label": "Walk + Mobility",
+        "id": "w2-sunday-cross-training",
+        "type": "cross-training",
+        "label": "Walk + Strength C",
         "workouts": [
           {
             "name": "5K plan: 35 min walk",
             "sets": 1,
             "reps": "5 km",
             "distanceKm": 5
+          },
+          {
+            "name": "Bike or row easy warm-up: 5-8 min",
+            "sets": 1,
+            "reps": "5-8 min"
+          },
+          {
+            "name": "Weighted-vest step-up or split squat",
+            "sets": 3,
+            "reps": "8/leg"
+          },
+          {
+            "name": "Dumbbell row",
+            "sets": 3,
+            "reps": "10-12/side"
+          },
+          {
+            "name": "Water-bag bear hug carry",
+            "sets": 3,
+            "reps": "30-40 m"
+          },
+          {
+            "name": "Powerball or grip donut: 3 short rounds",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Mobility: calves, hips, hamstrings and upper back",
+            "sets": 1,
+            "reps": "complete"
           }
         ]
       }
@@ -413,27 +473,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -479,27 +539,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -576,18 +636,48 @@
   {
     "id": "week3-sunday",
     "title": "Week 3 Sunday",
-    "subtitle": "Walk + Mobility",
+    "subtitle": "Walk + Strength C",
     "items": [
       {
-        "id": "w3-sunday-recovery",
-        "type": "recovery",
-        "label": "Walk + Mobility",
+        "id": "w3-sunday-cross-training",
+        "type": "cross-training",
+        "label": "Walk + Strength C",
         "workouts": [
           {
             "name": "5K plan: 40 min walk",
             "sets": 1,
             "reps": "5 km",
             "distanceKm": 5
+          },
+          {
+            "name": "Bike or row easy warm-up: 5-8 min",
+            "sets": 1,
+            "reps": "5-8 min"
+          },
+          {
+            "name": "Weighted-vest step-up or split squat",
+            "sets": 3,
+            "reps": "8/leg"
+          },
+          {
+            "name": "Dumbbell row",
+            "sets": 3,
+            "reps": "10-12/side"
+          },
+          {
+            "name": "Water-bag bear hug carry",
+            "sets": 3,
+            "reps": "30-40 m"
+          },
+          {
+            "name": "Powerball or grip donut: 3 short rounds",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Mobility: calves, hips, hamstrings and upper back",
+            "sets": 1,
+            "reps": "complete"
           }
         ]
       }
@@ -611,27 +701,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -677,27 +767,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -774,18 +864,48 @@
   {
     "id": "week4-sunday",
     "title": "Week 4 Sunday",
-    "subtitle": "Walk + Mobility",
+    "subtitle": "Walk + Strength C",
     "items": [
       {
-        "id": "w4-sunday-recovery",
-        "type": "recovery",
-        "label": "Walk + Mobility",
+        "id": "w4-sunday-cross-training",
+        "type": "cross-training",
+        "label": "Walk + Strength C",
         "workouts": [
           {
             "name": "5K plan: 45 min walk",
             "sets": 1,
             "reps": "5 km",
             "distanceKm": 5
+          },
+          {
+            "name": "Bike or row easy warm-up: 5-8 min",
+            "sets": 1,
+            "reps": "5-8 min"
+          },
+          {
+            "name": "Weighted-vest step-up or split squat",
+            "sets": 3,
+            "reps": "8/leg"
+          },
+          {
+            "name": "Dumbbell row",
+            "sets": 3,
+            "reps": "10-12/side"
+          },
+          {
+            "name": "Water-bag bear hug carry",
+            "sets": 3,
+            "reps": "30-40 m"
+          },
+          {
+            "name": "Powerball or grip donut: 3 short rounds",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Mobility: calves, hips, hamstrings and upper back",
+            "sets": 1,
+            "reps": "complete"
           }
         ]
       }
@@ -809,27 +929,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -875,27 +995,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -972,18 +1092,48 @@
   {
     "id": "week5-sunday",
     "title": "Week 5 Sunday",
-    "subtitle": "Walk + Mobility",
+    "subtitle": "Walk + Strength C",
     "items": [
       {
-        "id": "w5-sunday-recovery",
-        "type": "recovery",
-        "label": "Walk + Mobility",
+        "id": "w5-sunday-cross-training",
+        "type": "cross-training",
+        "label": "Walk + Strength C",
         "workouts": [
           {
             "name": "5K plan: 50 min walk",
             "sets": 1,
             "reps": "5 km",
             "distanceKm": 5
+          },
+          {
+            "name": "Bike or row easy warm-up: 5-8 min",
+            "sets": 1,
+            "reps": "5-8 min"
+          },
+          {
+            "name": "Weighted-vest step-up or split squat",
+            "sets": 3,
+            "reps": "8/leg"
+          },
+          {
+            "name": "Dumbbell row",
+            "sets": 3,
+            "reps": "10-12/side"
+          },
+          {
+            "name": "Water-bag bear hug carry",
+            "sets": 3,
+            "reps": "30-40 m"
+          },
+          {
+            "name": "Powerball or grip donut: 3 short rounds",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Mobility: calves, hips, hamstrings and upper back",
+            "sets": 1,
+            "reps": "complete"
           }
         ]
       }
@@ -1007,27 +1157,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -1073,27 +1223,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -1170,18 +1320,48 @@
   {
     "id": "week6-sunday",
     "title": "Week 6 Sunday",
-    "subtitle": "Walk + Mobility",
+    "subtitle": "Walk + Strength C",
     "items": [
       {
-        "id": "w6-sunday-recovery",
-        "type": "recovery",
-        "label": "Walk + Mobility",
+        "id": "w6-sunday-cross-training",
+        "type": "cross-training",
+        "label": "Walk + Strength C",
         "workouts": [
           {
             "name": "5K plan: 55 min walk",
             "sets": 1,
             "reps": "5 km",
             "distanceKm": 5
+          },
+          {
+            "name": "Bike or row easy warm-up: 5-8 min",
+            "sets": 1,
+            "reps": "5-8 min"
+          },
+          {
+            "name": "Weighted-vest step-up or split squat",
+            "sets": 3,
+            "reps": "8/leg"
+          },
+          {
+            "name": "Dumbbell row",
+            "sets": 3,
+            "reps": "10-12/side"
+          },
+          {
+            "name": "Water-bag bear hug carry",
+            "sets": 3,
+            "reps": "30-40 m"
+          },
+          {
+            "name": "Powerball or grip donut: 3 short rounds",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Mobility: calves, hips, hamstrings and upper back",
+            "sets": 1,
+            "reps": "complete"
           }
         ]
       }
@@ -1205,27 +1385,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -1271,27 +1451,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -1368,18 +1548,48 @@
   {
     "id": "week7-sunday",
     "title": "Week 7 Sunday",
-    "subtitle": "Walk + Mobility",
+    "subtitle": "Walk + Strength C",
     "items": [
       {
-        "id": "w7-sunday-recovery",
-        "type": "recovery",
-        "label": "Walk + Mobility",
+        "id": "w7-sunday-cross-training",
+        "type": "cross-training",
+        "label": "Walk + Strength C",
         "workouts": [
           {
             "name": "5K plan: 60 min walk",
             "sets": 1,
             "reps": "5 km",
             "distanceKm": 5
+          },
+          {
+            "name": "Bike or row easy warm-up: 5-8 min",
+            "sets": 1,
+            "reps": "5-8 min"
+          },
+          {
+            "name": "Weighted-vest step-up or split squat",
+            "sets": 3,
+            "reps": "8/leg"
+          },
+          {
+            "name": "Dumbbell row",
+            "sets": 3,
+            "reps": "10-12/side"
+          },
+          {
+            "name": "Water-bag bear hug carry",
+            "sets": 3,
+            "reps": "30-40 m"
+          },
+          {
+            "name": "Powerball or grip donut: 3 short rounds",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Mobility: calves, hips, hamstrings and upper back",
+            "sets": 1,
+            "reps": "complete"
           }
         ]
       }
@@ -1403,27 +1613,27 @@
           },
           {
             "name": "Goblet squat",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Dumbbell floor press or push-up",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Farmers carry with 16 kg kettlebells",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-40 m"
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -1469,27 +1679,27 @@
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Reverse lunge",
-            "sets": 2,
+            "sets": 3,
             "reps": "6-8/leg"
           },
           {
             "name": "Pull-up negative, assisted pull-up or body-row pattern",
-            "sets": 2,
+            "sets": 3,
             "reps": "5-8"
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -1616,12 +1826,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -1682,12 +1892,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -1777,7 +1987,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -1839,12 +2049,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -1905,12 +2115,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -2000,7 +2210,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -2062,12 +2272,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -2128,12 +2338,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -2223,7 +2433,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -2285,12 +2495,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -2351,12 +2561,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -2446,7 +2656,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -2508,12 +2718,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -2574,12 +2784,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -2669,7 +2879,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -2731,12 +2941,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -2797,12 +3007,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -2892,7 +3102,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -2954,12 +3164,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -3020,12 +3230,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -3115,7 +3325,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -3177,12 +3387,12 @@
           },
           {
             "name": "Dead bug",
-            "sets": 2,
+            "sets": 3,
             "reps": "8/side"
           },
           {
             "name": "Front plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "30-45 sec"
           }
         ]
@@ -3243,12 +3453,12 @@
           },
           {
             "name": "Hanging knee raise or lying leg raise",
-            "sets": 2,
+            "sets": 3,
             "reps": "8-12"
           },
           {
             "name": "Side plank",
-            "sets": 2,
+            "sets": 3,
             "reps": "20-40 sec/side"
           }
         ]
@@ -3338,7 +3548,7 @@
             "reps": "30-40 m"
           },
           {
-            "name": "Powerball or grip donut: 2 short rounds",
+            "name": "Powerball or grip donut: 3 short rounds",
             "sets": 1,
             "reps": "complete"
           }
@@ -3978,19 +4188,19 @@
         "label": "Run Quality",
         "workouts": [
           {
-            "name": "30-40 min easy run/walk",
+            "name": "10 min easy",
             "sets": 1,
-            "reps": "30-40 min"
+            "reps": "10 min"
           },
           {
-            "name": "4 short relaxed strides",
+            "name": "6 x 2 min steady / 2 min easy",
             "sets": 1,
-            "reps": "complete"
+            "reps": "2 min"
           },
           {
-            "name": "Keep this comfortable",
+            "name": "5-10 min cool-down",
             "sets": 1,
-            "reps": "complete"
+            "reps": "5-10 min"
           }
         ]
       }
@@ -4852,15 +5062,15 @@
   {
     "id": "week22-thursday",
     "title": "Week 22 Thursday",
-    "subtitle": "Home HYROX Skills",
+    "subtitle": "Gym HYROX Skills",
     "items": [
       {
         "id": "w22-thursday-hyrox",
         "type": "hyrox",
-        "label": "Home HYROX Skills",
+        "label": "Gym HYROX Skills",
         "workouts": [
           {
-            "name": "3 rounds at controlled effort",
+            "name": "3 rounds at controlled race practice effort",
             "sets": 3,
             "reps": "round"
           },
@@ -4871,33 +5081,28 @@
             "distanceKm": 0.4
           },
           {
-            "name": "Rower: 300 m smooth",
+            "name": "SkiErg: 500-750 m smooth technique",
             "sets": 1,
-            "reps": "0.3 km",
-            "distanceKm": 0.3
+            "reps": "0.75 km",
+            "distanceKm": 0.75
           },
           {
-            "name": "Kettlebell swings or fast high pulls: 10-12 reps",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Incline treadmill march with vest or unloaded: 2 min",
-            "sets": 1,
-            "reps": "2 min"
-          },
-          {
-            "name": "Water-bag lunges or reverse lunges: 6/leg",
+            "name": "Sled push: 2-4 lengths, build load gradually",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Dumbbell thrusters: 8-10 reps",
+            "name": "Sled pull: 2-4 lengths, smooth rope work",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Rest enough to keep movement tidy",
+            "name": "Wall balls",
+            "sets": 3,
+            "reps": "10-20 clean reps"
+          },
+          {
+            "name": "Stop with one good rep still in the tank",
             "sets": 1,
             "reps": "complete"
           }
@@ -5008,12 +5213,12 @@
   {
     "id": "week23-monday",
     "title": "Week 23 Monday",
-    "subtitle": "Strength + Core Base",
+    "subtitle": "Strength, Carries + Core",
     "items": [
       {
         "id": "w23-monday-strength",
         "type": "strength",
-        "label": "Strength + Core Base",
+        "label": "Strength, Carries + Core",
         "workouts": [
           {
             "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
@@ -5022,28 +5227,28 @@
           },
           {
             "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 3,
-            "reps": "10-12"
+            "sets": 4,
+            "reps": "8-10"
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 3,
-            "reps": "10-12"
+            "sets": 4,
+            "reps": "8-10"
           },
           {
             "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 3,
+            "sets": 4,
             "reps": "8-12"
           },
           {
             "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 3,
+            "sets": 4,
             "reps": "5-10"
           },
           {
             "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 4,
-            "reps": "30-40 m"
+            "sets": 5,
+            "reps": "50 m"
           },
           {
             "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
@@ -5075,16 +5280,18 @@
             "reps": "10 min"
           },
           {
-            "name": "6 x 2 min steady / 2 min easy",
+            "name": "5 x 800 m controlled / 2 min walk-jog",
             "sets": 1,
-            "reps": "2 min"
+            "reps": "0.8 km",
+            "distanceKm": 0.8
           },
           {
-            "name": "5-10 min cool-down",
+            "name": "Stop before form fades",
             "sets": 1,
-            "reps": "5-10 min"
+            "reps": "complete"
           }
-        ]
+        ],
+        "distanceKm": 0.8
       }
     ]
   },
@@ -5133,39 +5340,39 @@
         "label": "Home HYROX Skills",
         "workouts": [
           {
-            "name": "3 rounds at controlled effort",
-            "sets": 3,
+            "name": "4 rounds at controlled effort",
+            "sets": 4,
             "reps": "round"
           },
           {
-            "name": "400 m run/walk",
+            "name": "600 m run",
             "sets": 1,
-            "reps": "0.4 km",
-            "distanceKm": 0.4
+            "reps": "0.6 km",
+            "distanceKm": 0.6
           },
           {
-            "name": "Rower: 300 m smooth",
+            "name": "Rower: 500 m steady",
             "sets": 1,
-            "reps": "0.3 km",
-            "distanceKm": 0.3
+            "reps": "0.5 km",
+            "distanceKm": 0.5
           },
           {
-            "name": "Kettlebell swings or fast high pulls: 10-12 reps",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Incline treadmill march with vest or unloaded: 2 min",
-            "sets": 1,
-            "reps": "2 min"
-          },
-          {
-            "name": "Water-bag lunges or reverse lunges: 6/leg",
+            "name": "Kettlebell swings or fast high pulls: 15-20 reps",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Dumbbell thrusters: 8-10 reps",
+            "name": "Incline treadmill march with vest or unloaded: 3 min",
+            "sets": 1,
+            "reps": "3 min"
+          },
+          {
+            "name": "Water-bag lunges or reverse lunges: 8-10/leg",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "Dumbbell thrusters: 12-15 reps",
             "sets": 1,
             "reps": "complete"
           },
@@ -5213,30 +5420,30 @@
         "label": "Compromised Running",
         "workouts": [
           {
-            "name": "3 steady rounds",
-            "sets": 3,
+            "name": "4 steady rounds",
+            "sets": 4,
             "reps": "round"
           },
           {
-            "name": "500 m run/walk",
+            "name": "750 m run/walk",
+            "sets": 1,
+            "reps": "0.75 km",
+            "distanceKm": 0.75
+          },
+          {
+            "name": "500 m row",
             "sets": 1,
             "reps": "0.5 km",
             "distanceKm": 0.5
           },
           {
-            "name": "300 m row",
+            "name": "Farmers carry: 60 m",
             "sets": 1,
-            "reps": "0.3 km",
-            "distanceKm": 0.3
+            "reps": "0.06 km",
+            "distanceKm": 0.06
           },
           {
-            "name": "Farmers carry: 40 m",
-            "sets": 1,
-            "reps": "0.04 km",
-            "distanceKm": 0.04
-          },
-          {
-            "name": "Water-bag or reverse lunges: 6/leg",
+            "name": "Water-bag or reverse lunges: 8-10/leg",
             "sets": 1,
             "reps": "complete"
           },
@@ -5281,12 +5488,12 @@
   {
     "id": "week24-monday",
     "title": "Week 24 Monday",
-    "subtitle": "Strength + Core Base",
+    "subtitle": "Strength, Carries + Core",
     "items": [
       {
         "id": "w24-monday-strength",
         "type": "strength",
-        "label": "Strength + Core Base",
+        "label": "Strength, Carries + Core",
         "workouts": [
           {
             "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
@@ -5296,12 +5503,12 @@
           {
             "name": "Goblet squat or double-kettlebell front squat",
             "sets": 2,
-            "reps": "10-12"
+            "reps": "8-10"
           },
           {
             "name": "Kettlebell Romanian deadlift",
             "sets": 2,
-            "reps": "10-12"
+            "reps": "8-10"
           },
           {
             "name": "Dumbbell floor press, push-up or dip progression",
@@ -5315,8 +5522,8 @@
           },
           {
             "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 4,
-            "reps": "30-40 m"
+            "sets": 5,
+            "reps": "50 m"
           },
           {
             "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
@@ -5398,52 +5605,47 @@
   {
     "id": "week24-thursday",
     "title": "Week 24 Thursday",
-    "subtitle": "Home HYROX Skills",
+    "subtitle": "Gym HYROX Skills",
     "items": [
       {
         "id": "w24-thursday-hyrox",
         "type": "hyrox",
-        "label": "Home HYROX Skills",
+        "label": "Gym HYROX Skills",
         "workouts": [
           {
-            "name": "2 rounds at controlled effort",
+            "name": "2 rounds at controlled race practice effort",
             "sets": 2,
             "reps": "round"
           },
           {
-            "name": "400 m run/walk",
+            "name": "600 m run",
             "sets": 1,
-            "reps": "0.4 km",
-            "distanceKm": 0.4
+            "reps": "0.6 km",
+            "distanceKm": 0.6
           },
           {
-            "name": "Rower: 300 m smooth",
+            "name": "SkiErg: 500-750 m smooth technique",
             "sets": 1,
-            "reps": "0.3 km",
-            "distanceKm": 0.3
+            "reps": "0.75 km",
+            "distanceKm": 0.75
           },
           {
-            "name": "Kettlebell swings or fast high pulls: 10-12 reps",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Incline treadmill march with vest or unloaded: 2 min",
-            "sets": 1,
-            "reps": "2 min"
-          },
-          {
-            "name": "Water-bag lunges or reverse lunges: 6/leg",
+            "name": "Sled push: 2-4 lengths, build load gradually",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Dumbbell thrusters: 8-10 reps",
+            "name": "Sled pull: 2-4 lengths, smooth rope work",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Rest enough to keep movement tidy",
+            "name": "Wall balls",
+            "sets": 3,
+            "reps": "10-20 clean reps"
+          },
+          {
+            "name": "Stop with one good rep still in the tank",
             "sets": 1,
             "reps": "complete"
           }
@@ -5491,25 +5693,25 @@
             "reps": "round"
           },
           {
-            "name": "500 m run/walk",
+            "name": "750 m run/walk",
+            "sets": 1,
+            "reps": "0.75 km",
+            "distanceKm": 0.75
+          },
+          {
+            "name": "500 m row",
             "sets": 1,
             "reps": "0.5 km",
             "distanceKm": 0.5
           },
           {
-            "name": "300 m row",
+            "name": "Farmers carry: 60 m",
             "sets": 1,
-            "reps": "0.3 km",
-            "distanceKm": 0.3
+            "reps": "0.06 km",
+            "distanceKm": 0.06
           },
           {
-            "name": "Farmers carry: 40 m",
-            "sets": 1,
-            "reps": "0.04 km",
-            "distanceKm": 0.04
-          },
-          {
-            "name": "Water-bag or reverse lunges: 6/leg",
+            "name": "Water-bag or reverse lunges: 8-10/leg",
             "sets": 1,
             "reps": "complete"
           },
@@ -6218,15 +6420,15 @@
   {
     "id": "week27-thursday",
     "title": "Week 27 Thursday",
-    "subtitle": "Home HYROX Skills",
+    "subtitle": "Gym HYROX Skills",
     "items": [
       {
         "id": "w27-thursday-hyrox",
         "type": "hyrox",
-        "label": "Home HYROX Skills",
+        "label": "Gym HYROX Skills",
         "workouts": [
           {
-            "name": "4 rounds at controlled effort",
+            "name": "4 rounds at controlled race practice effort",
             "sets": 4,
             "reps": "round"
           },
@@ -6237,33 +6439,28 @@
             "distanceKm": 0.6
           },
           {
-            "name": "Rower: 500 m steady",
+            "name": "SkiErg: 500-750 m smooth technique",
             "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
+            "reps": "0.75 km",
+            "distanceKm": 0.75
           },
           {
-            "name": "Kettlebell swings or fast high pulls: 15-20 reps",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Incline treadmill march with vest or unloaded: 3 min",
-            "sets": 1,
-            "reps": "3 min"
-          },
-          {
-            "name": "Water-bag lunges or reverse lunges: 8-10/leg",
+            "name": "Sled push: 2-4 lengths, build load gradually",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Dumbbell thrusters: 12-15 reps",
+            "name": "Sled pull: 2-4 lengths, smooth rope work",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Rest enough to keep movement tidy",
+            "name": "Wall balls",
+            "sets": 3,
+            "reps": "10-20 clean reps"
+          },
+          {
+            "name": "Stop with one good rep still in the tank",
             "sets": 1,
             "reps": "complete"
           }
@@ -6408,8 +6605,8 @@
           },
           {
             "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 5,
-            "reps": "50 m"
+            "sets": 6,
+            "reps": "50-60 m"
           },
           {
             "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
@@ -6504,10 +6701,10 @@
             "reps": "round"
           },
           {
-            "name": "600 m run",
+            "name": "800 m controlled run",
             "sets": 1,
-            "reps": "0.6 km",
-            "distanceKm": 0.6
+            "reps": "0.8 km",
+            "distanceKm": 0.8
           },
           {
             "name": "SkiErg: 500-750 m smooth technique",
@@ -6579,16 +6776,16 @@
             "reps": "round"
           },
           {
-            "name": "750 m run/walk",
+            "name": "1 km run/walk",
+            "sets": 1,
+            "reps": "1 km",
+            "distanceKm": 1
+          },
+          {
+            "name": "750 m row",
             "sets": 1,
             "reps": "0.75 km",
             "distanceKm": 0.75
-          },
-          {
-            "name": "500 m row",
-            "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
           },
           {
             "name": "Farmers carry: 60 m",
@@ -6676,8 +6873,8 @@
           },
           {
             "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 5,
-            "reps": "50 m"
+            "sets": 6,
+            "reps": "50-60 m"
           },
           {
             "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
@@ -6709,18 +6906,18 @@
             "reps": "10 min"
           },
           {
-            "name": "5 x 800 m controlled / 2 min walk-jog",
+            "name": "4-6 x 1 km at planned HYROX run effort / 90 sec easy",
             "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
+            "reps": "1 km",
+            "distanceKm": 1
           },
           {
-            "name": "Stop before form fades",
+            "name": "Cool down easy",
             "sets": 1,
             "reps": "complete"
           }
         ],
-        "distanceKm": 0.8
+        "distanceKm": 1
       }
     ]
   },
@@ -6761,52 +6958,47 @@
   {
     "id": "week29-thursday",
     "title": "Week 29 Thursday",
-    "subtitle": "Home HYROX Skills",
+    "subtitle": "Gym HYROX Skills",
     "items": [
       {
         "id": "w29-thursday-hyrox",
         "type": "hyrox",
-        "label": "Home HYROX Skills",
+        "label": "Gym HYROX Skills",
         "workouts": [
           {
-            "name": "4 rounds at controlled effort",
-            "sets": 4,
+            "name": "5 rounds at controlled race practice effort",
+            "sets": 5,
             "reps": "round"
           },
           {
-            "name": "600 m run",
+            "name": "800 m controlled run",
             "sets": 1,
-            "reps": "0.6 km",
-            "distanceKm": 0.6
+            "reps": "0.8 km",
+            "distanceKm": 0.8
           },
           {
-            "name": "Rower: 500 m steady",
+            "name": "SkiErg: 500-750 m smooth technique",
             "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
+            "reps": "0.75 km",
+            "distanceKm": 0.75
           },
           {
-            "name": "Kettlebell swings or fast high pulls: 15-20 reps",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Incline treadmill march with vest or unloaded: 3 min",
-            "sets": 1,
-            "reps": "3 min"
-          },
-          {
-            "name": "Water-bag lunges or reverse lunges: 8-10/leg",
+            "name": "Sled push: 2-4 lengths, build load gradually",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Dumbbell thrusters: 12-15 reps",
+            "name": "Sled pull: 2-4 lengths, smooth rope work",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Rest enough to keep movement tidy",
+            "name": "Wall balls",
+            "sets": 3,
+            "reps": "10-20 clean reps"
+          },
+          {
+            "name": "Stop with one good rep still in the tank",
             "sets": 1,
             "reps": "complete"
           }
@@ -6849,21 +7041,21 @@
         "label": "Compromised Running",
         "workouts": [
           {
-            "name": "4 steady rounds",
-            "sets": 4,
+            "name": "5 steady rounds",
+            "sets": 5,
             "reps": "round"
           },
           {
-            "name": "750 m run/walk",
+            "name": "1 km run/walk",
+            "sets": 1,
+            "reps": "1 km",
+            "distanceKm": 1
+          },
+          {
+            "name": "750 m row",
             "sets": 1,
             "reps": "0.75 km",
             "distanceKm": 0.75
-          },
-          {
-            "name": "500 m row",
-            "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
           },
           {
             "name": "Farmers carry: 60 m",
@@ -6917,12 +7109,12 @@
   {
     "id": "week30-monday",
     "title": "Week 30 Monday",
-    "subtitle": "Strength, Carries + Core",
+    "subtitle": "Light Strength Tune-Up",
     "items": [
       {
         "id": "w30-monday-strength",
         "type": "strength",
-        "label": "Strength, Carries + Core",
+        "label": "Light Strength Tune-Up",
         "workouts": [
           {
             "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
@@ -6931,38 +7123,23 @@
           },
           {
             "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
+            "sets": 2,
             "reps": "8-10"
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
+            "sets": 2,
             "reps": "8-10"
           },
           {
             "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
+            "sets": 2,
             "reps": "8-12"
           },
           {
             "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
+            "sets": 2,
             "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 5,
-            "reps": "50 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
           }
         ]
       }
@@ -6979,23 +7156,21 @@
         "label": "Run Quality",
         "workouts": [
           {
-            "name": "10 min easy",
+            "name": "25-35 min easy run/walk",
             "sets": 1,
-            "reps": "10 min"
+            "reps": "25-35 min"
           },
           {
-            "name": "5 x 800 m controlled / 2 min walk-jog",
+            "name": "4 relaxed strides if legs feel good",
             "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
+            "reps": "complete"
           },
           {
-            "name": "Stop before form fades",
+            "name": "Finish fresh",
             "sets": 1,
             "reps": "complete"
           }
-        ],
-        "distanceKm": 0.8
+        ]
       }
     ]
   },
@@ -7010,9 +7185,9 @@
         "label": "Zone 2 + Core",
         "workouts": [
           {
-            "name": "30-35 min easy bike, row or treadmill walk",
+            "name": "20-25 min easy bike, row or walk",
             "sets": 1,
-            "reps": "30-35 min"
+            "reps": "20-25 min"
           },
           {
             "name": "Core: dead bug 2 x 8/side",
@@ -7036,23 +7211,23 @@
   {
     "id": "week30-thursday",
     "title": "Week 30 Thursday",
-    "subtitle": "Gym HYROX Skills",
+    "subtitle": "Technique Circuit",
     "items": [
       {
         "id": "w30-thursday-hyrox",
         "type": "hyrox",
-        "label": "Gym HYROX Skills",
+        "label": "Technique Circuit",
         "workouts": [
           {
-            "name": "4 rounds at controlled race practice effort",
-            "sets": 4,
+            "name": "2 rounds at controlled race practice effort",
+            "sets": 2,
             "reps": "round"
           },
           {
-            "name": "600 m run",
+            "name": "800 m controlled run",
             "sets": 1,
-            "reps": "0.6 km",
-            "distanceKm": 0.6
+            "reps": "0.8 km",
+            "distanceKm": 0.8
           },
           {
             "name": "SkiErg: 500-750 m smooth technique",
@@ -7067,16 +7242,6 @@
           },
           {
             "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
             "sets": 1,
             "reps": "complete"
           }
@@ -7111,43 +7276,37 @@
   {
     "id": "week30-saturday",
     "title": "Week 30 Saturday",
-    "subtitle": "Compromised Running",
+    "subtitle": "Short Mixed Rehearsal",
     "items": [
       {
         "id": "w30-saturday-mixed",
         "type": "mixed",
-        "label": "Compromised Running",
+        "label": "Short Mixed Rehearsal",
         "workouts": [
           {
-            "name": "4 steady rounds",
-            "sets": 4,
+            "name": "2 relaxed rounds",
+            "sets": 2,
             "reps": "round"
           },
           {
-            "name": "750 m run/walk",
+            "name": "400 m run/walk",
             "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
+            "reps": "0.4 km",
+            "distanceKm": 0.4
           },
           {
-            "name": "500 m row",
+            "name": "250 m row",
             "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
+            "reps": "0.25 km",
+            "distanceKm": 0.25
           },
           {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
+            "name": "Light carries or lunges",
             "sets": 1,
             "reps": "complete"
           },
           {
-            "name": "Easy walk between rounds as needed",
+            "name": "Stop feeling sharp",
             "sets": 1,
             "reps": "complete"
           }
@@ -7187,12 +7346,12 @@
   {
     "id": "week31-monday",
     "title": "Week 31 Monday",
-    "subtitle": "Strength, Carries + Core",
+    "subtitle": "Light Strength Tune-Up",
     "items": [
       {
         "id": "w31-monday-strength",
         "type": "strength",
-        "label": "Strength, Carries + Core",
+        "label": "Light Strength Tune-Up",
         "workouts": [
           {
             "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
@@ -7201,38 +7360,23 @@
           },
           {
             "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
+            "sets": 2,
             "reps": "8-10"
           },
           {
             "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
+            "sets": 2,
             "reps": "8-10"
           },
           {
             "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
+            "sets": 2,
             "reps": "8-12"
           },
           {
             "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
+            "sets": 2,
             "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 5,
-            "reps": "50 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
           }
         ]
       }
@@ -7249,2685 +7393,31 @@
         "label": "Run Quality",
         "workouts": [
           {
-            "name": "10 min easy",
+            "name": "25-35 min easy run/walk",
             "sets": 1,
-            "reps": "10 min"
+            "reps": "25-35 min"
           },
           {
-            "name": "5 x 800 m controlled / 2 min walk-jog",
+            "name": "4 relaxed strides if legs feel good",
             "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
+            "reps": "complete"
           },
           {
-            "name": "Stop before form fades",
+            "name": "Finish fresh",
             "sets": 1,
             "reps": "complete"
           }
-        ],
-        "distanceKm": 0.8
+        ]
       }
     ]
   },
   {
     "id": "week31-wednesday",
     "title": "Week 31 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w31-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week31-thursday",
-    "title": "Week 31 Thursday",
-    "subtitle": "Home HYROX Skills",
-    "items": [
-      {
-        "id": "w31-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Home HYROX Skills",
-        "workouts": [
-          {
-            "name": "4 rounds at controlled effort",
-            "sets": 4,
-            "reps": "round"
-          },
-          {
-            "name": "600 m run",
-            "sets": 1,
-            "reps": "0.6 km",
-            "distanceKm": 0.6
-          },
-          {
-            "name": "Rower: 500 m steady",
-            "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
-          },
-          {
-            "name": "Kettlebell swings or fast high pulls: 15-20 reps",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Incline treadmill march with vest or unloaded: 3 min",
-            "sets": 1,
-            "reps": "3 min"
-          },
-          {
-            "name": "Water-bag lunges or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Dumbbell thrusters: 12-15 reps",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Rest enough to keep movement tidy",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week31-friday",
-    "title": "Week 31 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w31-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week31-saturday",
-    "title": "Week 31 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w31-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "4 steady rounds",
-            "sets": 4,
-            "reps": "round"
-          },
-          {
-            "name": "750 m run/walk",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "500 m row",
-            "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week31-sunday",
-    "title": "Week 31 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w31-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week32-monday",
-    "title": "Week 32 Monday",
-    "subtitle": "Strength, Carries + Core",
-    "items": [
-      {
-        "id": "w32-monday-strength",
-        "type": "strength",
-        "label": "Strength, Carries + Core",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 2,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 2,
-            "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 5,
-            "reps": "50 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week32-tuesday",
-    "title": "Week 32 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w32-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "25-35 min easy run/walk",
-            "sets": 1,
-            "reps": "25-35 min"
-          },
-          {
-            "name": "4 relaxed strides if legs feel good",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Finish fresh",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week32-wednesday",
-    "title": "Week 32 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w32-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week32-thursday",
-    "title": "Week 32 Thursday",
-    "subtitle": "Gym HYROX Skills",
-    "items": [
-      {
-        "id": "w32-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Gym HYROX Skills",
-        "workouts": [
-          {
-            "name": "2 rounds at controlled race practice effort",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "600 m run",
-            "sets": 1,
-            "reps": "0.6 km",
-            "distanceKm": 0.6
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week32-friday",
-    "title": "Week 32 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w32-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week32-saturday",
-    "title": "Week 32 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w32-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "2 steady rounds",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "750 m run/walk",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "500 m row",
-            "sets": 1,
-            "reps": "0.5 km",
-            "distanceKm": 0.5
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week32-sunday",
-    "title": "Week 32 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w32-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week33-monday",
-    "title": "Week 33 Monday",
-    "subtitle": "Strength, Carries + Core",
-    "items": [
-      {
-        "id": "w33-monday-strength",
-        "type": "strength",
-        "label": "Strength, Carries + Core",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
-            "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 6,
-            "reps": "50-60 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week33-tuesday",
-    "title": "Week 33 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w33-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "10 min easy",
-            "sets": 1,
-            "reps": "10 min"
-          },
-          {
-            "name": "4-6 x 1 km at planned HYROX run effort / 90 sec easy",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "Cool down easy",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ],
-        "distanceKm": 1
-      }
-    ]
-  },
-  {
-    "id": "week33-wednesday",
-    "title": "Week 33 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w33-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week33-thursday",
-    "title": "Week 33 Thursday",
-    "subtitle": "Gym HYROX Skills",
-    "items": [
-      {
-        "id": "w33-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Gym HYROX Skills",
-        "workouts": [
-          {
-            "name": "5 rounds at controlled race practice effort",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week33-friday",
-    "title": "Week 33 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w33-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week33-saturday",
-    "title": "Week 33 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w33-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "5 steady rounds",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "1 km run/walk",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "750 m row",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week33-sunday",
-    "title": "Week 33 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w33-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week34-monday",
-    "title": "Week 34 Monday",
-    "subtitle": "Strength, Carries + Core",
-    "items": [
-      {
-        "id": "w34-monday-strength",
-        "type": "strength",
-        "label": "Strength, Carries + Core",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
-            "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 6,
-            "reps": "50-60 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week34-tuesday",
-    "title": "Week 34 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w34-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "10 min easy",
-            "sets": 1,
-            "reps": "10 min"
-          },
-          {
-            "name": "4-6 x 1 km at planned HYROX run effort / 90 sec easy",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "Cool down easy",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ],
-        "distanceKm": 1
-      }
-    ]
-  },
-  {
-    "id": "week34-wednesday",
-    "title": "Week 34 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w34-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week34-thursday",
-    "title": "Week 34 Thursday",
-    "subtitle": "Gym HYROX Skills",
-    "items": [
-      {
-        "id": "w34-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Gym HYROX Skills",
-        "workouts": [
-          {
-            "name": "5 rounds at controlled race practice effort",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week34-friday",
-    "title": "Week 34 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w34-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week34-saturday",
-    "title": "Week 34 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w34-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "5 steady rounds",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "1 km run/walk",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "750 m row",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week34-sunday",
-    "title": "Week 34 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w34-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week35-monday",
-    "title": "Week 35 Monday",
-    "subtitle": "Strength, Carries + Core",
-    "items": [
-      {
-        "id": "w35-monday-strength",
-        "type": "strength",
-        "label": "Strength, Carries + Core",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
-            "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 6,
-            "reps": "50-60 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week35-tuesday",
-    "title": "Week 35 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w35-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "10 min easy",
-            "sets": 1,
-            "reps": "10 min"
-          },
-          {
-            "name": "4-6 x 1 km at planned HYROX run effort / 90 sec easy",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "Cool down easy",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ],
-        "distanceKm": 1
-      }
-    ]
-  },
-  {
-    "id": "week35-wednesday",
-    "title": "Week 35 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w35-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week35-thursday",
-    "title": "Week 35 Thursday",
-    "subtitle": "Gym HYROX Skills",
-    "items": [
-      {
-        "id": "w35-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Gym HYROX Skills",
-        "workouts": [
-          {
-            "name": "5 rounds at controlled race practice effort",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week35-friday",
-    "title": "Week 35 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w35-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week35-saturday",
-    "title": "Week 35 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w35-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "5 steady rounds",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "1 km run/walk",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "750 m row",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week35-sunday",
-    "title": "Week 35 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w35-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week36-monday",
-    "title": "Week 36 Monday",
-    "subtitle": "Strength, Carries + Core",
-    "items": [
-      {
-        "id": "w36-monday-strength",
-        "type": "strength",
-        "label": "Strength, Carries + Core",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 2,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 2,
-            "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 6,
-            "reps": "50-60 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week36-tuesday",
-    "title": "Week 36 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w36-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "25-35 min easy run/walk",
-            "sets": 1,
-            "reps": "25-35 min"
-          },
-          {
-            "name": "4 relaxed strides if legs feel good",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Finish fresh",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week36-wednesday",
-    "title": "Week 36 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w36-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week36-thursday",
-    "title": "Week 36 Thursday",
-    "subtitle": "Gym HYROX Skills",
-    "items": [
-      {
-        "id": "w36-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Gym HYROX Skills",
-        "workouts": [
-          {
-            "name": "2 rounds at controlled race practice effort",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week36-friday",
-    "title": "Week 36 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w36-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week36-saturday",
-    "title": "Week 36 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w36-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "2 steady rounds",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "1 km run/walk",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "750 m row",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week36-sunday",
-    "title": "Week 36 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w36-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week37-monday",
-    "title": "Week 37 Monday",
-    "subtitle": "Strength, Carries + Core",
-    "items": [
-      {
-        "id": "w37-monday-strength",
-        "type": "strength",
-        "label": "Strength, Carries + Core",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
-            "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 6,
-            "reps": "50-60 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week37-tuesday",
-    "title": "Week 37 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w37-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "10 min easy",
-            "sets": 1,
-            "reps": "10 min"
-          },
-          {
-            "name": "4-6 x 1 km at planned HYROX run effort / 90 sec easy",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "Cool down easy",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ],
-        "distanceKm": 1
-      }
-    ]
-  },
-  {
-    "id": "week37-wednesday",
-    "title": "Week 37 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w37-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week37-thursday",
-    "title": "Week 37 Thursday",
-    "subtitle": "Gym HYROX Skills",
-    "items": [
-      {
-        "id": "w37-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Gym HYROX Skills",
-        "workouts": [
-          {
-            "name": "5 rounds at controlled race practice effort",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week37-friday",
-    "title": "Week 37 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w37-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week37-saturday",
-    "title": "Week 37 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w37-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "5 steady rounds",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "1 km run/walk",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "750 m row",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week37-sunday",
-    "title": "Week 37 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w37-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week38-monday",
-    "title": "Week 38 Monday",
-    "subtitle": "Strength, Carries + Core",
-    "items": [
-      {
-        "id": "w38-monday-strength",
-        "type": "strength",
-        "label": "Strength, Carries + Core",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
-            "reps": "5-10"
-          },
-          {
-            "name": "Farmers carry or water-bag bear-hug carry",
-            "sets": 6,
-            "reps": "50-60 m"
-          },
-          {
-            "name": "Core: dead bug, side plank and leg raise, 2-3 controlled rounds",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Grip: powerball or grip donut, 2 short easy rounds",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week38-tuesday",
-    "title": "Week 38 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w38-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "10 min easy",
-            "sets": 1,
-            "reps": "10 min"
-          },
-          {
-            "name": "4-6 x 1 km at planned HYROX run effort / 90 sec easy",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "Cool down easy",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ],
-        "distanceKm": 1
-      }
-    ]
-  },
-  {
-    "id": "week38-wednesday",
-    "title": "Week 38 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w38-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "30-35 min easy bike, row or treadmill walk",
-            "sets": 1,
-            "reps": "30-35 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week38-thursday",
-    "title": "Week 38 Thursday",
-    "subtitle": "Gym HYROX Skills",
-    "items": [
-      {
-        "id": "w38-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Gym HYROX Skills",
-        "workouts": [
-          {
-            "name": "5 rounds at controlled race practice effort",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Wall balls",
-            "sets": 3,
-            "reps": "10-20 clean reps"
-          },
-          {
-            "name": "Stop with one good rep still in the tank",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week38-friday",
-    "title": "Week 38 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w38-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week38-saturday",
-    "title": "Week 38 Saturday",
-    "subtitle": "Compromised Running",
-    "items": [
-      {
-        "id": "w38-saturday-mixed",
-        "type": "mixed",
-        "label": "Compromised Running",
-        "workouts": [
-          {
-            "name": "5 steady rounds",
-            "sets": 5,
-            "reps": "round"
-          },
-          {
-            "name": "1 km run/walk",
-            "sets": 1,
-            "reps": "1 km",
-            "distanceKm": 1
-          },
-          {
-            "name": "750 m row",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Farmers carry: 60 m",
-            "sets": 1,
-            "reps": "0.06 km",
-            "distanceKm": 0.06
-          },
-          {
-            "name": "Water-bag or reverse lunges: 8-10/leg",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Easy walk between rounds as needed",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week38-sunday",
-    "title": "Week 38 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w38-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week39-monday",
-    "title": "Week 39 Monday",
-    "subtitle": "Light Strength Tune-Up",
-    "items": [
-      {
-        "id": "w39-monday-strength",
-        "type": "strength",
-        "label": "Light Strength Tune-Up",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 2,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 2,
-            "reps": "5-10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week39-tuesday",
-    "title": "Week 39 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w39-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "25-35 min easy run/walk",
-            "sets": 1,
-            "reps": "25-35 min"
-          },
-          {
-            "name": "4 relaxed strides if legs feel good",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Finish fresh",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week39-wednesday",
-    "title": "Week 39 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w39-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "20-25 min easy bike, row or walk",
-            "sets": 1,
-            "reps": "20-25 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week39-thursday",
-    "title": "Week 39 Thursday",
-    "subtitle": "Technique Circuit",
-    "items": [
-      {
-        "id": "w39-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Technique Circuit",
-        "workouts": [
-          {
-            "name": "2 rounds at controlled race practice effort",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week39-friday",
-    "title": "Week 39 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w39-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week39-saturday",
-    "title": "Week 39 Saturday",
-    "subtitle": "Short Mixed Rehearsal",
-    "items": [
-      {
-        "id": "w39-saturday-mixed",
-        "type": "mixed",
-        "label": "Short Mixed Rehearsal",
-        "workouts": [
-          {
-            "name": "2 relaxed rounds",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "400 m run/walk",
-            "sets": 1,
-            "reps": "0.4 km",
-            "distanceKm": 0.4
-          },
-          {
-            "name": "250 m row",
-            "sets": 1,
-            "reps": "0.25 km",
-            "distanceKm": 0.25
-          },
-          {
-            "name": "Light carries or lunges",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Stop feeling sharp",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week39-sunday",
-    "title": "Week 39 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w39-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week40-monday",
-    "title": "Week 40 Monday",
-    "subtitle": "Light Strength Tune-Up",
-    "items": [
-      {
-        "id": "w40-monday-strength",
-        "type": "strength",
-        "label": "Light Strength Tune-Up",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 2,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 2,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 2,
-            "reps": "5-10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week40-tuesday",
-    "title": "Week 40 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w40-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "25-35 min easy run/walk",
-            "sets": 1,
-            "reps": "25-35 min"
-          },
-          {
-            "name": "4 relaxed strides if legs feel good",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Finish fresh",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week40-wednesday",
-    "title": "Week 40 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w40-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "20-25 min easy bike, row or walk",
-            "sets": 1,
-            "reps": "20-25 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week40-thursday",
-    "title": "Week 40 Thursday",
-    "subtitle": "Technique Circuit",
-    "items": [
-      {
-        "id": "w40-thursday-hyrox",
-        "type": "hyrox",
-        "label": "Technique Circuit",
-        "workouts": [
-          {
-            "name": "2 rounds at controlled race practice effort",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "800 m controlled run",
-            "sets": 1,
-            "reps": "0.8 km",
-            "distanceKm": 0.8
-          },
-          {
-            "name": "SkiErg: 500-750 m smooth technique",
-            "sets": 1,
-            "reps": "0.75 km",
-            "distanceKm": 0.75
-          },
-          {
-            "name": "Sled push: 2-4 lengths, build load gradually",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Sled pull: 2-4 lengths, smooth rope work",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week40-friday",
-    "title": "Week 40 Friday",
-    "subtitle": "Rest Day",
-    "items": [
-      {
-        "id": "w40-friday-rest",
-        "type": "rest",
-        "label": "Rest Day",
-        "workouts": [
-          {
-            "name": "Rest",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Optional 5-10 min gentle mobility only",
-            "sets": 1,
-            "reps": "5-10 min"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week40-saturday",
-    "title": "Week 40 Saturday",
-    "subtitle": "Short Mixed Rehearsal",
-    "items": [
-      {
-        "id": "w40-saturday-mixed",
-        "type": "mixed",
-        "label": "Short Mixed Rehearsal",
-        "workouts": [
-          {
-            "name": "2 relaxed rounds",
-            "sets": 2,
-            "reps": "round"
-          },
-          {
-            "name": "400 m run/walk",
-            "sets": 1,
-            "reps": "0.4 km",
-            "distanceKm": 0.4
-          },
-          {
-            "name": "250 m row",
-            "sets": 1,
-            "reps": "0.25 km",
-            "distanceKm": 0.25
-          },
-          {
-            "name": "Light carries or lunges",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Stop feeling sharp",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week40-sunday",
-    "title": "Week 40 Sunday",
-    "subtitle": "Sun Recovery Day",
-    "items": [
-      {
-        "id": "w40-sunday-recovery",
-        "type": "recovery",
-        "label": "Sun Recovery Day",
-        "workouts": [
-          {
-            "name": "10-30 min easy walk or bike",
-            "sets": 1,
-            "reps": "10-30 min"
-          },
-          {
-            "name": "5-10 min mobility",
-            "sets": 1,
-            "reps": "5-10 min"
-          },
-          {
-            "name": "No fatigue chasing today",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week41-monday",
-    "title": "Week 41 Monday",
-    "subtitle": "Light Strength Tune-Up",
-    "items": [
-      {
-        "id": "w41-monday-strength",
-        "type": "strength",
-        "label": "Light Strength Tune-Up",
-        "workouts": [
-          {
-            "name": "Warm-up: 5-8 min easy row, bike or treadmill walk",
-            "sets": 1,
-            "reps": "5-8 min"
-          },
-          {
-            "name": "Goblet squat or double-kettlebell front squat",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Kettlebell Romanian deadlift",
-            "sets": 4,
-            "reps": "8-10"
-          },
-          {
-            "name": "Dumbbell floor press, push-up or dip progression",
-            "sets": 4,
-            "reps": "8-12"
-          },
-          {
-            "name": "Pull-up progression, controlled negatives or hanging knee raise",
-            "sets": 4,
-            "reps": "5-10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week41-tuesday",
-    "title": "Week 41 Tuesday",
-    "subtitle": "Run Quality",
-    "items": [
-      {
-        "id": "w41-tuesday-run",
-        "type": "run",
-        "label": "Run Quality",
-        "workouts": [
-          {
-            "name": "20-30 min easy",
-            "sets": 1,
-            "reps": "20-30 min"
-          },
-          {
-            "name": "3 x 1 min smooth",
-            "sets": 1,
-            "reps": "1 min"
-          },
-          {
-            "name": "No fitness testing",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week41-wednesday",
-    "title": "Week 41 Wednesday",
-    "subtitle": "Zone 2 + Core",
-    "items": [
-      {
-        "id": "w41-wednesday-recovery",
-        "type": "recovery",
-        "label": "Zone 2 + Core",
-        "workouts": [
-          {
-            "name": "20-25 min easy bike, row or walk",
-            "sets": 1,
-            "reps": "20-25 min"
-          },
-          {
-            "name": "Core: dead bug 2 x 8/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Core: side plank 2 x 20-40 sec/side",
-            "sets": 1,
-            "reps": "complete"
-          },
-          {
-            "name": "Mobility: hips, calves and upper back",
-            "sets": 1,
-            "reps": "complete"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "week41-thursday",
-    "title": "Week 41 Thursday",
     "subtitle": "HYROX Race Day",
     "items": [
       {
-        "id": "w41-thursday-hyrox",
+        "id": "w31-wednesday-hyrox",
         "type": "hyrox",
         "label": "HYROX Race Day",
         "workouts": [
@@ -9984,12 +7474,12 @@
     ]
   },
   {
-    "id": "week41-friday",
-    "title": "Week 41 Friday",
+    "id": "week31-thursday",
+    "title": "Week 31 Thursday",
     "subtitle": "Post-Race Recovery",
     "items": [
       {
-        "id": "w41-friday-recovery",
+        "id": "w31-thursday-recovery",
         "type": "recovery",
         "label": "Post-Race Recovery",
         "workouts": [
@@ -10013,12 +7503,12 @@
     ]
   },
   {
-    "id": "week41-saturday",
-    "title": "Week 41 Saturday",
+    "id": "week31-friday",
+    "title": "Week 31 Friday",
     "subtitle": "Post-Race Recovery",
     "items": [
       {
-        "id": "w41-saturday-recovery",
+        "id": "w31-friday-recovery",
         "type": "recovery",
         "label": "Post-Race Recovery",
         "workouts": [
@@ -10042,12 +7532,41 @@
     ]
   },
   {
-    "id": "week41-sunday",
-    "title": "Week 41 Sunday",
+    "id": "week31-saturday",
+    "title": "Week 31 Saturday",
     "subtitle": "Post-Race Recovery",
     "items": [
       {
-        "id": "w41-sunday-recovery",
+        "id": "w31-saturday-recovery",
+        "type": "recovery",
+        "label": "Post-Race Recovery",
+        "workouts": [
+          {
+            "name": "Easy walk or bike 10-20 min",
+            "sets": 1,
+            "reps": "10-20 min"
+          },
+          {
+            "name": "Gentle hips, calves and back mobility",
+            "sets": 1,
+            "reps": "complete"
+          },
+          {
+            "name": "No testing, no punishment",
+            "sets": 1,
+            "reps": "complete"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "week31-sunday",
+    "title": "Week 31 Sunday",
+    "subtitle": "Post-Race Recovery",
+    "items": [
+      {
+        "id": "w31-sunday-recovery",
         "type": "recovery",
         "label": "Post-Race Recovery",
         "workouts": [
